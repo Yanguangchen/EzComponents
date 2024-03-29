@@ -63,16 +63,15 @@ function Namecard(props) {
   };
 
   //logo of the company
-  const [logoY, setLogoY] = useState("1.25");
+  const [logoY, setLogoY] = useState("1.25em");
+  const [logoSize, setLogoSize] = useState("10%"); // Assuming logoSize is a percentage for example
 
   const CompanyLogo = {
     zIndex: "-1",
-    //POSITIONING
     position: "absolute",
     left: "20.3125em",
-    top: logoY,
-    //SIZING
-    width: logoSize,
+    top: `${logoY}`, // Using state variable for vertical position
+    width: `${logoSize}`, // Using state variable for width size
   };
 
   //TITLE OF USER
@@ -117,6 +116,20 @@ function Namecard(props) {
     //FONT SETTINGS
     fontFamily: contactFont,
   };
+
+  //-----SLIDER CSS CONTROL------//
+  const sliderStyle = {
+    marginTop: "5em",
+    marginLeft: "3em",
+  };
+
+  const sliderLabel = {
+    padding: "0",
+    margin: "0",
+    fontFamily: "Arial",
+    textAlign: "center",
+  };
+
   //---------------------INLINE CSS STYLES---------------------//
 
   return (
@@ -138,21 +151,21 @@ function Namecard(props) {
         </div>
       </div>
       <div>
-        <SliderComponent initialValue={logoY} onValueChange={setLogoY} />
-        <SliderComponent initialValue={logoY} onValueChange={setLogoY} />
+        <div style={sliderStyle}>
+          <p style={sliderLabel}>Logo Y axis</p>
+          <SliderComponent initialValue={logoY} onValueChange={setLogoY} />
+          <p style={sliderLabel}>Logo Size</p>
+          <SliderComponent
+            initialValue={logoSize}
+            onValueChange={setLogoSize}
+            min={10}
+            max={100}
+          />
+        </div>
       </div>
     </div>
   );
 }
-//----------CARD INFORMATION DEFAULT VALUES
-//Enter information here
-
-//Name ontop of card
-var userName = "Chen Yanguang";
-//Title of card name
-var title = "ReactJs Engineer";
-//Path of the lgo
-var logoPath = "/logos/logo512.png";
 
 //----------CUSTOMIZABLE DIMENSIONS------------------//
 //COMPANY LOGO//
@@ -164,28 +177,54 @@ var fontTitle = "monospace"; //DEFAULT MONOSPACE
 var titleSize = "90%"; //DEFUALT 80%
 var titleLeftMargin = "2.1em"; //DEFAULT 2.1em
 //-------CONTACT-----------------------------------------------------|
-var contactFont = "Arial";       //                    |DEFAULT ARIAL|
+var contactFont = "Arial"; //                    |DEFAULT ARIAL|
 var contactLeftMargin = "3.8em"; //                    |DEFAULT 3.8em|
 var contactMarginBottom = "0em"; //                    |DEFAULT 0em  |
 //---------------EDIT PROPERTIES HERE--------------------------------|
-const defaultNameCard = (
-  <Namecard name={userName} title={title} LogoURL={logoPath} />
-);
-const user1 = (
-  <Namecard name="Bob" title="professional son" LogoURL={logoPath} />
-);
-const user2 = (
-  <Namecard name="Alexa" title="Voice Assistant" LogoURL={logoPath} />
-);
-//--------------------------------------------------------------//
-//////////////////////////////////////////////////////////////////
-//                    R E N D E R                               //
-//////////////////////////////////////////////////////////////////
+
+function App() {
+  const [components, setComponents] = useState([
+    {
+      name: "Chen Yanguang",
+      title: "ReactJs Engineer",
+      LogoURL: "/logos/logo512.png",
+    },
+    { name: "Bob", title: "Professional Son", LogoURL: "/logos/logo512.png" },
+  ]);
+
+  const addComponent = () => {
+    const newUser = {
+      name: `User ${components.length + 1}`,
+      title: "New Role",
+      LogoURL: "/logos/logo512.png",
+    };
+    setComponents([...components, newUser]);
+  };
+
+  const addComponentBtnDiv = {
+    fontFamily: "Arial",
+    textAlign: "center",
+    marginBottom: "5em",
+  };
+
+  const addComponentBtn = {
+    fontSize: "2em",
+  }
+
+  return (
+    <div style={addComponentBtnDiv}>
+      {components.map((user, index) => (
+        <Namecard
+          key={index}
+          name={user.name}
+          title={user.title}
+          LogoURL={user.LogoURL}
+        />
+      ))}
+      <button style={addComponentBtn} onClick={addComponent}>Add Component</button>
+    </div>
+  );
+}
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <>
-    {defaultNameCard}
-    {user1}
-    {user2}
-  </>
-);
+root.render(<App />);
