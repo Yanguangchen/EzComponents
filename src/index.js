@@ -3,9 +3,9 @@
 /////////////////////////////////////////////////////////////////////////
 
 //--------------MODULES-----------------//
-import React, { useState } from 'react'; // Import React and useState together
-import ReactDOM from 'react-dom/client';
-import SliderComponent from './sliderComponent'; // Ensure the path is correct
+import React, { useState } from "react"; // Import React and useState together
+import ReactDOM from "react-dom/client";
+import SliderComponent from "./sliderComponent"; // Ensure the path is correct
 //--------------------------------------//
 
 function Namecard(props) {
@@ -18,6 +18,7 @@ function Namecard(props) {
     flexDirection: "row", // Stack vertically
   };
 
+  //OUTERCONTAINER CSS----------//
   const defaultNamecardStyle = {
     //DISPLAY
     marginTop: "2em",
@@ -32,7 +33,7 @@ function Namecard(props) {
     position: "relative",
   };
 
-  //Name of the person
+  //NAME-----------------------//
   const CardName = {
     //TEXT
     fontFamily: fontName,
@@ -59,7 +60,6 @@ function Namecard(props) {
     //SIZING
     width: "25em",
     height: "12.5em",
-    filter: "grayscale()",
   };
 
   //logo of the company
@@ -67,45 +67,54 @@ function Namecard(props) {
 
   const CompanyLogo = {
     zIndex: "-1",
+    //POSITIONING
     position: "absolute",
     left: "20.3125em",
     top: logoY,
+    //SIZING
     width: logoSize,
   };
 
-  //title of the user
+  //TITLE OF USER
   const Title = {
+    //POSITIONING
     textAlign: "left",
     marginLeft: titleLeftMargin,
+    marginTop: "0.1875em",
+    //FONT SETTINGS
     fontFamily: fontTitle,
     fontSize: titleSize,
     color: "gray",
-    marginTop: "0.1875em",
   };
 
   //CONTACT DETAILS
-
   const Number = {
+    //FONT SETTINGS
     textAlign: "left",
+    fontFamily: contactFont,
+    //POSITIONING
     marginTop: "3.8em",
     marginLeft: contactLeftMargin,
     marginBottom: contactMarginBottom,
-    fontFamily: contactFont,
   };
 
   const Website = {
+    //FONT SETTINGS
     textAlign: "left",
+    fontFamily: contactFont,
+    //POSITIONING
     marginTop: "0.7em",
     marginLeft: contactLeftMargin,
     marginBottom: contactMarginBottom,
-    fontFamily: contactFont,
   };
 
   const location = {
+    //POSITIONING
     textAlign: "left",
     marginTop: "0.6em",
     marginLeft: contactLeftMargin,
     marginBottom: contactMarginBottom,
+    //FONT SETTINGS
     fontFamily: contactFont,
   };
   //---------------------INLINE CSS STYLES---------------------//
@@ -129,7 +138,8 @@ function Namecard(props) {
         </div>
       </div>
       <div>
-      <SliderComponent initialValue={logoY} onValueChange={setLogoY}/>
+        <SliderComponent initialValue={logoY} onValueChange={setLogoY} />
+        <SliderComponent initialValue={logoY} onValueChange={setLogoY} />
       </div>
     </div>
   );
@@ -144,21 +154,20 @@ var title = "ReactJs Engineer";
 //Path of the lgo
 var logoPath = "/logos/logo512.png";
 
-//----------CUSTOMIZABLE DIMENSIONS
+//----------CUSTOMIZABLE DIMENSIONS------------------//
 //COMPANY LOGO//
 var logoSize = "10%"; //DEFAULT 10%
-//NAME//
+//----------NAME-------------------------------------//
 var fontName = "Arial"; //DEFAULT ARIAL
 var fontTitle = "monospace"; //DEFAULT MONOSPACE
-//TITLE//
+//---------TITLE-------------------------------------//
 var titleSize = "90%"; //DEFUALT 80%
 var titleLeftMargin = "2.1em"; //DEFAULT 2.1em
-
-//CONTACT
-var contactFont = "Arial"; //DEFAULT ARIAL
-var contactLeftMargin = "3.8em"; //DEFAULT 3.8em
-var contactMarginBottom = "0em"; //DEFAULT 0em
-//---------------EDIT PROPERTIES HERE----------------------------//
+//-------CONTACT-----------------------------------------------------|
+var contactFont = "Arial";       //                    |DEFAULT ARIAL|
+var contactLeftMargin = "3.8em"; //                    |DEFAULT 3.8em|
+var contactMarginBottom = "0em"; //                    |DEFAULT 0em  |
+//---------------EDIT PROPERTIES HERE--------------------------------|
 const defaultNameCard = (
   <Namecard name={userName} title={title} LogoURL={logoPath} />
 );
