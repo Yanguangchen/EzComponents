@@ -290,7 +290,7 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    <div class="xxx">
+    <div className="xxx">
       <h1 className="namecardWrapper">These are Reusable React Components</h1>
       <p className="namecardWrapper">
         Click "Add Component" to generate random namecards
