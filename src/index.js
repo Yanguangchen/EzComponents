@@ -145,9 +145,9 @@ function Namecard(props) {
         <p style={CardName}>{props.name}</p>
         <p style={Title}>{props.title}</p>
         <div>
-          <p style={Number}>82872532</p>
-          <p style={Website}>www.facebook.com</p>
-          <p style={location}>128 Bedok North</p>
+          <p style={Number}>{props.number}</p>
+          <p style={Website}>{props.url}</p>
+          <p style={location}>{props.location}</p>
         </div>
       </div>
       <div>
@@ -183,33 +183,58 @@ var contactMarginBottom = "0em"; //                    |DEFAULT 0em  |
 //---------------EDIT PROPERTIES HERE--------------------------------|
 
 function App() {
+
+  //Initilize npm dependancy: random-number in range//
+  var rando = require('random-number-in-range');
+  //Initialize npm dependancy uniqye-names-generator
+  const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator');
+  const randomName = uniqueNamesGenerator({ dictionaries: [adjectives, colors, animals] }); // e.g big_red_donkey
+  const randomURL= uniqueNamesGenerator({dictionaries: [adjectives]});
+  //-------------------------------------------------//
   const [components, setComponents] = useState([
     {
-      name: "Chen Yanguang",
-      title: "ReactJs Engineer",
+      name: `${randomName}`,
+      title: "Job Title 1",
       LogoURL: "/logos/logo512.png",
+      number: `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`, //set random number to phone number
+      url: `www.${randomURL + rando(1,200)}.com`,
+      location: "128 bedok",
     },
-    { name: "Bob", title: "Professional Son", LogoURL: "/logos/logo512.png" },
+    {
+      name: "uneven_velvet_dolphin",
+      title: "Job Title 2",
+      LogoURL: "/logos/logo512.png",
+      number: `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`,
+      url: `www.${randomURL + rando(1,200)}.com`,
+      location: "128 bedok",
+    },
   ]);
 
+  //adds new component to the webpage
   const addComponent = () => {
     const newUser = {
-      name: `User ${components.length + 1}`,
-      title: "New Role",
+      name: `${randomName}`,
+      title: `Job Title ${components.length + 1}`,
       LogoURL: "/logos/logo512.png",
+      number: `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`,
+      url: `www.${randomURL + rando(1, 200)}.com`,
+      location: `${rando(1, 401)}  ${randomURL} Ave, blk ${rando(0,9)} #${rando(1, 30)}-${rando(0, 600)} S${rando(1, 1000000)} `
     };
     setComponents([...components, newUser]);
   };
 
+  //-----CSS CONTROL FOR ADDING NEW COMPONENTS-----//
+  //---Container that wraps the container
   const addComponentBtnDiv = {
     fontFamily: "Arial",
     textAlign: "center",
     marginBottom: "5em",
   };
-
+  //---CSS styling for the button itself
   const addComponentBtn = {
     fontSize: "2em",
   }
+  //-----------------------------------------------//
 
   return (
     <div style={addComponentBtnDiv}>
@@ -219,6 +244,9 @@ function App() {
           name={user.name}
           title={user.title}
           LogoURL={user.LogoURL}
+          number={user.number}
+          url={user.url}
+          location={user.location}
         />
       ))}
       <button style={addComponentBtn} onClick={addComponent}>Add Component</button>

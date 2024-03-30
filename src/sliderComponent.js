@@ -12,22 +12,22 @@ function SliderComponent(props) {
   //---------------------------------------------------------------------------|
 
   // Handler function to update state and propagate the change upwards via props
-  var handleSliderChange = function(event) {
+  var handleSliderChange = function (event) {
     // CONVERT NUMBER TO EM STRING------------------//
     var newValueInEm = event.target.value + 'em';
     //----------------------------------------------//
     setSliderValue(newValueInEm);
-  
+
     // If there is a function provided via props to handle the change, call it
     if (props.onValueChange) {
       props.onValueChange(newValueInEm);
     }
   };
 
-    //-----SLIDER CSS CONTROL------//
-    const sliderStyle = {
-      marginTop: "10em",
-    }
+  //-----SLIDER CSS CONTROL------//
+  const sliderStyle = {
+    marginTop: "10em",
+  }
 
   return (
     <input
