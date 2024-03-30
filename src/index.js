@@ -16,6 +16,8 @@ function Namecard(props) {
   const OuterContainer = {
     display: "flex",
     flexDirection: "row", // Stack vertically
+    justifyContent: "center",
+    marginBottom: "2em",
   };
 
   //OUTERCONTAINER CSS----------//
@@ -38,10 +40,9 @@ function Namecard(props) {
     //TEXT
     fontFamily: fontName,
     textAlign: "left",
-    fontFamily: "Arial",
+    fontFamily: "Roboto",
     fontSize: "120%",
     fontWeight: "600",
-    color: "black",
 
     //SIZING AND POSITIONING
     //MARGINS
@@ -72,6 +73,7 @@ function Namecard(props) {
     left: "20.3125em",
     top: `${logoY}`, // Using state variable for vertical position
     width: `${logoSize}`, // Using state variable for width size
+    animation: "rotate360 5s linear infinite", // 5s duration, linear timing, infinite loop
   };
 
   //TITLE OF USER
@@ -90,20 +92,20 @@ function Namecard(props) {
   const Number = {
     //FONT SETTINGS
     textAlign: "left",
-    fontFamily: contactFont,
+    fontFamily: contactFont, //DEFAULT: Roboto
     //POSITIONING
     marginTop: "3.8em",
-    marginLeft: contactLeftMargin,
+    marginLeft: contactLeftMargin, //DEFAULT 3.8em
     marginBottom: contactMarginBottom,
   };
 
   const Website = {
     //FONT SETTINGS
     textAlign: "left",
-    fontFamily: contactFont,
+    fontFamily: contactFont, //DEFAULT: Roboto
     //POSITIONING
     marginTop: "0.7em",
-    marginLeft: contactLeftMargin,
+    marginLeft: contactLeftMargin, //DEFAULT 3.8em
     marginBottom: contactMarginBottom,
   };
 
@@ -111,10 +113,10 @@ function Namecard(props) {
     //POSITIONING
     textAlign: "left",
     marginTop: "0.6em",
-    marginLeft: contactLeftMargin,
+    marginLeft: contactLeftMargin, //DEFAULT 3.8em
     marginBottom: contactMarginBottom,
     //FONT SETTINGS
-    fontFamily: contactFont,
+    fontFamily: contactFont, //DEFAULT: Roboto
   };
 
   //-----SLIDER CSS CONTROL------//
@@ -126,7 +128,7 @@ function Namecard(props) {
   const sliderLabel = {
     padding: "0",
     margin: "0",
-    fontFamily: "Arial",
+    fontFamily: "Roboto",
     textAlign: "center",
   };
 
@@ -166,47 +168,73 @@ function Namecard(props) {
     </div>
   );
 }
-
+//---------------------------------------------------//
+//            C S S    V A R I A B L E S             //
+//---------------------------------------------------//
 //----------CUSTOMIZABLE DIMENSIONS------------------//
-//COMPANY LOGO//
-var logoSize = "10%"; //DEFAULT 10%
-//----------NAME-------------------------------------//
-var fontName = "Arial"; //DEFAULT ARIAL
-var fontTitle = "monospace"; //DEFAULT MONOSPACE
-//---------TITLE-------------------------------------//
-var titleSize = "90%"; //DEFUALT 80%
-var titleLeftMargin = "2.1em"; //DEFAULT 2.1em
-//-------CONTACT-----------------------------------------------------|
-var contactFont = "Arial"; //                    |DEFAULT ARIAL|
-var contactLeftMargin = "3.8em"; //                    |DEFAULT 3.8em|
-var contactMarginBottom = "0em"; //                    |DEFAULT 0em  |
-//---------------EDIT PROPERTIES HERE--------------------------------|
+//COMPANY LOGO                                       // |-----------------|
+var logoSize = "10%"; // |DEFAULT 10%      |
+//----------NAME-------------------------------------// |-----------------|
+var fontName = "Roboto"; // |DEFAULT Roboto    |
+var fontTitle = "monospace"; // |DEFAULT MONOSPACE|
+//---------TITLE-------------------------------------// |-----------------|
+var titleSize = "90%"; // |DEFUALT 80%      |
+var titleLeftMargin = "2.1em"; // |DEFAULT 2.1em    |
+//-------CONTACT-------------------------------------//-------------------|
+var contactFont = "Roboto"; //                        // |DEFAULT Roboto    |
+var contactLeftMargin = "3.8em"; //                  // |DEFAULT 3.8em    |
+var contactMarginBottom = "0em"; //                  // |DEFAULT 0em      |
+//---------------EDIT PROPERTIES HERE-------------------------------------|
 
 function App() {
-
   //Initilize npm dependancy: random-number in range//
-  var rando = require('random-number-in-range');
-  //Initialize npm dependancy uniqye-names-generator
-  const { uniqueNamesGenerator, adjectives, colors, animals } = require('unique-names-generator');
-  const randomName = uniqueNamesGenerator({ dictionaries: [adjectives, colors, animals] }); // e.g big_red_donkey
-  const randomURL= uniqueNamesGenerator({dictionaries: [adjectives]});
+  var rando = require("random-number-in-range");
+  //------------UNIQUE-NAMES GENERATOR-----------------------------------//
+  const {
+    //
+    uniqueNamesGenerator, 
+    adjectives, 
+    colors, 
+    animals,
+    names, 
+  } = require("unique-names-generator"); //
+  //-------RANDOM NAME VAR WITH adjectives + colors + animals------------//
+  const randomName = uniqueNamesGenerator({
+    //
+    dictionaries: [adjectives, colors, animals], //
+  }); // e.g big_red_donkey                                              //
+  //-------GENERATE RANDOM DOMAIN NAMES----------------------------------//
+  const randomURL = uniqueNamesGenerator({ dictionaries: [adjectives] }); //
+  //---------------------------------------------------------------------//
+
+  //-------------------------------------------------//
+  //              PRESET COMPONENTS                  //
+  //          COMPONENTS ARE RENDERED BY DEFAULT     //
   //-------------------------------------------------//
   const [components, setComponents] = useState([
     {
-      name: `${randomName}`,
-      title: "Job Title 1",
-      LogoURL: "/logos/logo512.png",
-      number: `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`, //set random number to phone number
-      url: `www.${randomURL + rando(1,200)}.com`,
-      location: "128 bedok",
+      name: `${randomName}`, //add a var random name
+      title: "Job Title 1", //add job title
+      LogoURL: "/logos/logo512.png", //url for the company logo
+      number: `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`, //set random number to phone number, all numbers must start with 8 or 9 and have 9 digits, country
+      url: `www.${randomURL + rando(1, 200)}.com`, //set all URL to start with www. domain name is set using randomURL variable (outputs random names) followed by random numbers(1 to 200)
+      location: `${rando(1, 401)}  ${randomURL} Ave, blk ${rando(
+        //random number + ave + blk + random block number + random unit number + s + random 6 digit number (postal code)
+        0,
+        9
+      )} #${rando(1, 30)}-${rando(0, 600)} S${rando(1, 1000000)} `,
     },
+    //-----------SECOND PRESET COMPONENT FOLLOWS THE CONVENTIONS ABOVE
     {
-      name: "uneven_velvet_dolphin",
+      name: `${randomName}`,
       title: "Job Title 2",
       LogoURL: "/logos/logo512.png",
       number: `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`,
-      url: `www.${randomURL + rando(1,200)}.com`,
-      location: "128 bedok",
+      url: `www.${randomURL + rando(1, 200)}.com`,
+      location: `${rando(1, 401)}  ${randomURL} Ave, blk ${rando(
+        0,
+        9
+      )} #${rando(1, 30)}-${rando(0, 600)} S${rando(1, 1000000)} `,
     },
   ]);
 
@@ -218,7 +246,10 @@ function App() {
       LogoURL: "/logos/logo512.png",
       number: `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`,
       url: `www.${randomURL + rando(1, 200)}.com`,
-      location: `${rando(1, 401)}  ${randomURL} Ave, blk ${rando(0,9)} #${rando(1, 30)}-${rando(0, 600)} S${rando(1, 1000000)} `
+      location: `${rando(1, 401)}  ${randomURL} Ave, blk ${rando(
+        0,
+        9
+      )} #${rando(1, 30)}-${rando(0, 600)} S${rando(1, 1000000)} `,
     };
     setComponents([...components, newUser]);
   };
@@ -226,14 +257,14 @@ function App() {
   //-----CSS CONTROL FOR ADDING NEW COMPONENTS-----//
   //---Container that wraps the container
   const addComponentBtnDiv = {
-    fontFamily: "Arial",
+    fontFamily: "Roboto",
     textAlign: "center",
     marginBottom: "5em",
   };
   //---CSS styling for the button itself
   const addComponentBtn = {
     fontSize: "2em",
-  }
+  };
   //-----------------------------------------------//
 
   return (
@@ -249,10 +280,24 @@ function App() {
           location={user.location}
         />
       ))}
-      <button style={addComponentBtn} onClick={addComponent}>Add Component</button>
+      <button style={addComponentBtn} onClick={addComponent}>
+        Add Component
+      </button>
     </div>
   );
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(
+  <>
+    <div class="xxx">
+      <h1 className="namecardWrapper">These are Reusable React Components</h1>
+      <p className="namecardWrapper">
+        Click "Add Component" to generate random namecards
+      </p>
+    </div>
+    <div>
+      <App />
+    </div>
+  </>
+);
