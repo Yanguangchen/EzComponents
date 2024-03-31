@@ -1,6 +1,6 @@
-/////////////////////////////////////////////////////////////////////////
-//                      NAME CARD COMPONENTS                           //
-/////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////
+  //                      NAME CARD COMPONENTS                           //
+  /////////////////////////////////////////////////////////////////////////
 
 //--------------MODULES-----------------//
 import React, { useState } from "react"; // Import React and useState together
@@ -168,22 +168,22 @@ function Namecard(props) {
     </div>
   );
 }
-//---------------------------------------------------//
-//            C S S    V A R I A B L E S             //
-//---------------------------------------------------//
-//----------CUSTOMIZABLE DIMENSIONS------------------//
-//COMPANY LOGO                                       // |-----------------|
-var logoSize = "10%"; // |DEFAULT 10%      |
-//----------NAME-------------------------------------// |-----------------|
-var fontName = "Roboto"; // |DEFAULT Roboto    |
-var fontTitle = "monospace"; // |DEFAULT MONOSPACE|
-//---------TITLE-------------------------------------// |-----------------|
-var titleSize = "90%"; // |DEFUALT 80%      |
-var titleLeftMargin = "2.1em"; // |DEFAULT 2.1em    |
-//-------CONTACT-------------------------------------//-------------------|
-var contactFont = "Roboto"; //                        // |DEFAULT Roboto    |
-var contactLeftMargin = "3.8em"; //                  // |DEFAULT 3.8em    |
-var contactMarginBottom = "0em"; //                  // |DEFAULT 0em      |
+//----------------------------------------------------//
+//            C S S    V A R I A B L E S              //
+//----------------------------------------------------//
+//----------CUSTOMIZABLE DIMENSIONS-------------------//
+//COMPANY LOGO
+var logoSize = "10%";                                 // DEFAULT 10%
+//-------NAME-----------------------------------------//
+var fontName = "Roboto";                              // DEFAULT Roboto
+var fontTitle = "monospace";                          // DEFAULT MONOSPACE
+//-------TITLE----------------------------------------//
+var titleSize = "90%";                                // DEFUALT 80%
+var titleLeftMargin = "2.1em";                        // DEFAULT 2.1em
+//-------CONTACT--------------------------------------//
+var contactFont = "Roboto";                           // DEFAULT Roboto
+var contactLeftMargin = "3.8em";                      // DEFAULT 3.8em
+var contactMarginBottom = "0em";                      // DEFAULT 0em
 //---------------EDIT PROPERTIES HERE-------------------------------------|
 
 function App() {
@@ -191,20 +191,19 @@ function App() {
   var rando = require("random-number-in-range");
   //------------UNIQUE-NAMES GENERATOR-----------------------------------//
   const {
-    //
-    uniqueNamesGenerator, 
-    adjectives, 
-    colors, 
+    uniqueNamesGenerator,
+    adjectives,
+    colors,
     animals,
-    names, 
+    names,
   } = require("unique-names-generator"); //
   //-------RANDOM NAME VAR WITH adjectives + colors + animals------------//
   const randomName = uniqueNamesGenerator({
     //
-    dictionaries: [adjectives, colors, animals], //
-  }); // e.g big_red_donkey                                              //
+    dictionaries: [adjectives, colors, animals],
+  }); // e.g big_red_donkey
   //-------GENERATE RANDOM DOMAIN NAMES----------------------------------//
-  const randomURL = uniqueNamesGenerator({ dictionaries: [adjectives] }); //
+  const randomURL = uniqueNamesGenerator({ dictionaries: [adjectives] });
   //---------------------------------------------------------------------//
 
   //-------------------------------------------------//
@@ -213,43 +212,63 @@ function App() {
   //-------------------------------------------------//
   const [components, setComponents] = useState([
     {
-      name: `${randomName}`, //add a var random name
-      title: "Job Title 1", //add job title
-      LogoURL: "/logos/logo512.png", //url for the company logo
-      number: `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`, //set random number to phone number, all numbers must start with 8 or 9 and have 9 digits, country
-      url: `www.${randomURL + rando(1, 200)}.com`, //set all URL to start with www. domain name is set using randomURL variable (outputs random names) followed by random numbers(1 to 200)
+      name    : `${randomName}`,      //add a var random name
+      //-------------------------------------------------//
+      title   : "Job Title 1",        //add job title
+      //-------------------------------------------------//
+      LogoURL : "/logos/logo512.png", //url for the company logo
+      //-------------------------------------------------//
+      number  : `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`, //set random number to phone number, all numbers must start with 8 or 9 and have 9 digits, country
+      //-------------------------------------------------//
+      url     : `www.${randomURL + rando(1, 200)}.com`, //set all URL to start with www. domain name is set using randomURL variable (outputs random names) followed by random numbers(1 to 200)
+      //-------------------------------------------------//
       location: `${rando(1, 401)}  ${randomURL} Ave, blk ${rando(
-        //random number + ave + blk + random block number + random unit number + s + random 6 digit number (postal code)
+      //random number + ave + blk + random block number + random unit number + s + random 6 digit number (postal code)
         0,
         9
       )} #${rando(1, 30)}-${rando(0, 600)} S${rando(1, 1000000)} `,
     },
     //-----------SECOND PRESET COMPONENT FOLLOWS THE CONVENTIONS ABOVE
     {
-      name: `${randomName}`,
-      title: "Job Title 2",
-      LogoURL: "/logos/logo512.png",
-      number: `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`,
-      url: `www.${randomURL + rando(1, 200)}.com`,
+      name    : `${randomName}`,
+      //-------------------------------------------------//
+      title   : "Job Title 2",
+      //-------------------------------------------------//
+      LogoURL : "/logos/logo512.png",
+      //-------------------------------------------------//
+      number  : `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`,
+      //-------------------------------------------------//
+      url     : `www.${randomURL + rando(1, 200)}.com`,
+      //-------------------------------------------------//
       location: `${rando(1, 401)}  ${randomURL} Ave, blk ${rando(
         0,
         9
       )} #${rando(1, 30)}-${rando(0, 600)} S${rando(1, 1000000)} `,
+      //-------------------------------------------------//
     },
   ]);
 
-  //adds new component to the webpage
+  /////////////////////////////////////////////////
+  //          ADD NEW COMPONENTS                 //
+  /////////////////////////////////////////////////
+  
   const addComponent = () => {
     const newUser = {
-      name: `${randomName}`,
-      title: `Job Title ${components.length + 1}`,
-      LogoURL: "/logos/logo512.png",
-      number: `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`,
-      url: `www.${randomURL + rando(1, 200)}.com`,
+      name    : `${randomName}`,
+      //-------------------------------------------------//
+      title   : `Job Title ${components.length + 1}`,
+      //-------------------------------------------------//
+      LogoURL : "/logos/logo512.png",
+      //-------------------------------------------------//
+      number  : `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`,
+      //-------------------------------------------------//
+      url     : `www.${randomURL + rando(1, 200)}.com`,
+      //-------------------------------------------------//
       location: `${rando(1, 401)}  ${randomURL} Ave, blk ${rando(
         0,
         9
       )} #${rando(1, 30)}-${rando(0, 600)} S${rando(1, 1000000)} `,
+      //-------------------------------------------------//
     };
     setComponents([...components, newUser]);
   };
@@ -257,8 +276,8 @@ function App() {
   //-----CSS CONTROL FOR ADDING NEW COMPONENTS-----//
   //---Container that wraps the container
   const addComponentBtnDiv = {
-    fontFamily: "Roboto",
-    textAlign: "center",
+    fontFamily  : "Roboto",
+    textAlign   : "center",
     marginBottom: "5em",
   };
   //---CSS styling for the button itself
