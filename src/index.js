@@ -139,7 +139,7 @@ function Namecard(props) {
       <div style={defaultNamecardStyle}>
         <img
           style={BackgroundImage}
-          src="/nameCards/default.png"
+          src="./EzComponents/nameCards/default.png"
           alt="Default Namecard"
         />
         <img style={CompanyLogo} src={props.LogoURL} alt="company logo"></img>
@@ -234,7 +234,7 @@ function App() {
       //-------------------------------------------------//
       title   : "Job Title 2",
       //-------------------------------------------------//
-      LogoURL : "/logos/logo512.png",
+      LogoURL : "./EzComponents/logos/logo512.png",
       //-------------------------------------------------//
       number  : `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`,
       //-------------------------------------------------//
