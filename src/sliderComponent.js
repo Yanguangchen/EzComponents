@@ -6,18 +6,19 @@ import ReactDOM from "react-dom/client";
 function SliderComponent(props) {
   // Initialize the sliderValue state with the value from props if provided
   const [sliderValue, setSliderValue] = useState(props.initialValue);
+
   //---------------------------------------------------------------------------|
   //            SliderValue holds current value of the state                   |
-  //setSliderValue is a function that you call to update value of sliderValue  |
+  // setSliderValue is a function that you call to update value of sliderValue |
   //---------------------------------------------------------------------------|
 
   // Handler function to update state and propagate the change upwards via props
-  var handleSliderChange = function(event) {
+  var handleSliderChange = function (event) {
     // CONVERT NUMBER TO EM STRING------------------//
-    var newValueInEm = event.target.value + 'em';
+    var newValueInEm = event.target.value + "em";
     //----------------------------------------------//
     setSliderValue(newValueInEm);
-  
+
     // If there is a function provided via props to handle the change, call it
     if (props.onValueChange) {
       props.onValueChange(newValueInEm);
@@ -36,14 +37,14 @@ function SliderComponent(props) {
 }
 
 function App() {
-  const [logoY, setLogoY] = useState(1.25);  // Assuming this is a numeric value
-  const [logoSize, setLogoSize] = useState(50);  // Example initial size for logo (could be in percentage, em, pixels, etc.)
+  const [logoY, setLogoY] = useState(1.25); // Assuming this is a numeric value
+  const [logoSize, setLogoSize] = useState(50); // Example initial size for logo (could be in percentage, em, pixels, etc.)
 
   return (
     <div>
       <SliderComponent
         initialValue={logoY}
-        onValueChange={(value) => setLogoY(value + 'em')} // You can still convert to 'em' in the callback
+        onValueChange={(value) => setLogoY(value + "em")} // You can still convert to 'em' in the callback
         min={1}
         max={4}
       />
