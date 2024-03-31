@@ -1,6 +1,6 @@
-  /////////////////////////////////////////////////////////////////////////
-  //                      NAME CARD COMPONENTS                           //
-  /////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+//                      NAME CARD COMPONENTS                           //
+/////////////////////////////////////////////////////////////////////////
 
 //--------------MODULES-----------------//
 import React, { useState } from "react"; // Import React and useState together
@@ -18,6 +18,7 @@ function Namecard(props) {
     flexDirection: "row", // Stack vertically
     justifyContent: "center",
     marginBottom: "2em",
+    columnGap: "2em"
   };
 
   //OUTERCONTAINER CSS----------//
@@ -122,7 +123,10 @@ function Namecard(props) {
   //-----SLIDER CSS CONTROL------//
   const sliderStyle = {
     marginTop: "5em",
-    marginLeft: "3em",
+    marginLeft: "5em",
+    marginRight: "5em",
+    margin: "0",
+
   };
 
   const sliderLabel = {
@@ -131,6 +135,27 @@ function Namecard(props) {
     fontFamily: "Roboto",
     textAlign: "center",
   };
+
+  const cardBack = {
+    width: "100%",
+
+    //SIZING
+    width: "25em",
+    height: "12.5em",
+    marginTop: "2em",
+
+  };
+
+  const video ={
+    width: "100%",
+    width: "25em",
+    height: "12.6em",
+    border: "1px solid black",
+    paddingBottom: "3px",
+
+    borderRadius: "0.825em",
+
+  }
 
   //---------------------INLINE CSS STYLES---------------------//
 
@@ -152,7 +177,6 @@ function Namecard(props) {
           <p style={location}>{props.location}</p>
         </div>
       </div>
-      <div>
         <div style={sliderStyle}>
           <p style={sliderLabel}>Logo Y axis</p>
           <SliderComponent initialValue={logoY} onValueChange={setLogoY} />
@@ -164,6 +188,10 @@ function Namecard(props) {
             max={100}
           />
         </div>
+      <div style={cardBack}>
+        <video style={video} src="nameCards/cardBack.mp4" autoPlay muted loop playsInline>
+
+        </video>
       </div>
     </div>
   );
@@ -173,17 +201,17 @@ function Namecard(props) {
 //----------------------------------------------------//
 //----------CUSTOMIZABLE DIMENSIONS-------------------//
 //COMPANY LOGO
-var logoSize = "10%";                                 // DEFAULT 10%
+var logoSize = "10%"; // DEFAULT 10%
 //-------NAME-----------------------------------------//
-var fontName = "Roboto";                              // DEFAULT Roboto
-var fontTitle = "monospace";                          // DEFAULT MONOSPACE
+var fontName = "Roboto"; // DEFAULT Roboto
+var fontTitle = "monospace"; // DEFAULT MONOSPACE
 //-------TITLE----------------------------------------//
-var titleSize = "90%";                                // DEFUALT 80%
-var titleLeftMargin = "2.1em";                        // DEFAULT 2.1em
+var titleSize = "90%"; // DEFUALT 80%
+var titleLeftMargin = "2.1em"; // DEFAULT 2.1em
 //-------CONTACT--------------------------------------//
-var contactFont = "Roboto";                           // DEFAULT Roboto
-var contactLeftMargin = "3.8em";                      // DEFAULT 3.8em
-var contactMarginBottom = "0em";                      // DEFAULT 0em
+var contactFont = "Roboto"; // DEFAULT Roboto
+var contactLeftMargin = "3.8em"; // DEFAULT 3.8em
+var contactMarginBottom = "0em"; // DEFAULT 0em
 //---------------EDIT PROPERTIES HERE-------------------------------------|
 
 function App() {
@@ -212,33 +240,33 @@ function App() {
   //-------------------------------------------------//
   const [components, setComponents] = useState([
     {
-      name    : `${randomName}`,      //add a var random name
+      name: `${randomName}`, //add a var random name
       //-------------------------------------------------//
-      title   : "Job Title 1",        //add job title
+      title: "Job Title 1", //add job title
       //-------------------------------------------------//
-      LogoURL : "logos/logo512.png", //url for the company logo
+      LogoURL: "logos/logo512.png", //url for the company logo
       //-------------------------------------------------//
-      number  : `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`, //set random number to phone number, all numbers must start with 8 or 9 and have 9 digits, country
+      number: `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`, //set random number to phone number, all numbers must start with 8 or 9 and have 9 digits, country
       //-------------------------------------------------//
-      url     : `www.${randomURL + rando(1, 200)}.com`, //set all URL to start with www. domain name is set using randomURL variable (outputs random names) followed by random numbers(1 to 200)
+      url: `www.${randomURL + rando(1, 200)}.com`, //set all URL to start with www. domain name is set using randomURL variable (outputs random names) followed by random numbers(1 to 200)
       //-------------------------------------------------//
       location: `${rando(1, 401)}  ${randomURL} Ave, blk ${rando(
-      //random number + ave + blk + random block number + random unit number + s + random 6 digit number (postal code)
+        //random number + ave + blk + random block number + random unit number + s + random 6 digit number (postal code)
         0,
         9
       )} #${rando(1, 30)}-${rando(0, 600)} S${rando(1, 1000000)} `,
     },
     //-----------SECOND PRESET COMPONENT FOLLOWS THE CONVENTIONS ABOVE
     {
-      name    : `${randomName}`,
+      name: `${randomName}`,
       //-------------------------------------------------//
-      title   : "Job Title 2",
+      title: "Job Title 2",
       //-------------------------------------------------//
-      LogoURL : "logos/logo512.png",
+      LogoURL: "logos/logo512.png",
       //-------------------------------------------------//
-      number  : `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`,
+      number: `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`,
       //-------------------------------------------------//
-      url     : `www.${randomURL + rando(1, 200)}.com`,
+      url: `www.${randomURL + rando(1, 200)}.com`,
       //-------------------------------------------------//
       location: `${rando(1, 401)}  ${randomURL} Ave, blk ${rando(
         0,
@@ -251,18 +279,18 @@ function App() {
   /////////////////////////////////////////////////
   //          ADD NEW COMPONENTS                 //
   /////////////////////////////////////////////////
-  
+
   const addComponent = () => {
     const newUser = {
-      name    : `${randomName}`,
+      name: `${randomName}`,
       //-------------------------------------------------//
-      title   : `Job Title ${components.length + 1}`,
+      title: `Job Title ${components.length + 1}`,
       //-------------------------------------------------//
-      LogoURL : "logos/logo512.png",
+      LogoURL: "logos/logo512.png",
       //-------------------------------------------------//
-      number  : `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`,
+      number: `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`,
       //-------------------------------------------------//
-      url     : `www.${randomURL + rando(1, 200)}.com`,
+      url: `www.${randomURL + rando(1, 200)}.com`,
       //-------------------------------------------------//
       location: `${rando(1, 401)}  ${randomURL} Ave, blk ${rando(
         0,
@@ -276,8 +304,8 @@ function App() {
   //-----CSS CONTROL FOR ADDING NEW COMPONENTS-----//
   //---Container that wraps the container
   const addComponentBtnDiv = {
-    fontFamily  : "Roboto",
-    textAlign   : "center",
+    fontFamily: "Roboto",
+    textAlign: "center",
     marginBottom: "5em",
   };
   //---CSS styling for the button itself
