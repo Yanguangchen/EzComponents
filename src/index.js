@@ -6,6 +6,7 @@
 import React, { useState } from "react"; // Import React and useState together
 import ReactDOM from "react-dom/client";
 import SliderComponent from "./sliderComponent"; // Ensure the path is correct
+import PaymentComponent from "./payment";
 //--------------------------------------//
 
 function Namecard(props) {
@@ -345,6 +346,7 @@ root.render(
     </div>
     <div>
       <App />
+      <PaymentComponent/>
     </div>
   </>
 );
