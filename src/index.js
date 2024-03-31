@@ -139,7 +139,7 @@ function Namecard(props) {
       <div style={defaultNamecardStyle}>
         <img
           style={BackgroundImage}
-          src="./EzComponents/public/nameCards/default.png"
+          src="nameCards/default.png"
           alt="Default Namecard"
         />
         <img style={CompanyLogo} src={props.LogoURL} alt="company logo"></img>
@@ -216,7 +216,7 @@ function App() {
       //-------------------------------------------------//
       title   : "Job Title 1",        //add job title
       //-------------------------------------------------//
-      LogoURL : "./EzComponents/public/logos/logo512.png", //url for the company logo
+      LogoURL : "logos/logo512.png", //url for the company logo
       //-------------------------------------------------//
       number  : `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`, //set random number to phone number, all numbers must start with 8 or 9 and have 9 digits, country
       //-------------------------------------------------//
@@ -234,7 +234,7 @@ function App() {
       //-------------------------------------------------//
       title   : "Job Title 2",
       //-------------------------------------------------//
-      LogoURL : "./EzComponents/public/logos/logo512.png",
+      LogoURL : "logos/logo512.png",
       //-------------------------------------------------//
       number  : `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`,
       //-------------------------------------------------//
@@ -258,7 +258,7 @@ function App() {
       //-------------------------------------------------//
       title   : `Job Title ${components.length + 1}`,
       //-------------------------------------------------//
-      LogoURL : "./EzComponents/public/logos/logo512.png",
+      LogoURL : "logos/logo512.png",
       //-------------------------------------------------//
       number  : `+65 ${rando(8, 9) + Math.random().toString().slice(4, 11)}`,
       //-------------------------------------------------//
