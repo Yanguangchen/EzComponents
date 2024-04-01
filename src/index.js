@@ -19,7 +19,7 @@ function Namecard(props) {
     flexDirection: "row", // Stack vertically
     justifyContent: "center",
     marginBottom: "2em",
-    columnGap: "2em"
+    columnGap: "2em",
   };
 
   //OUTERCONTAINER CSS----------//
@@ -127,7 +127,6 @@ function Namecard(props) {
     marginLeft: "5em",
     marginRight: "5em",
     margin: "0",
-
   };
 
   const sliderLabel = {
@@ -144,18 +143,16 @@ function Namecard(props) {
     width: "25em",
     height: "12.5em",
     marginTop: "2em",
-
   };
 
-  const video ={
+  const video = {
     width: "100%",
     width: "25em",
     height: "12.6em",
     border: "1px solid black",
     paddingBottom: "3px",
     borderRadius: "0.825em",
-
-  }
+  };
 
   //---------------------INLINE CSS STYLES---------------------//
 
@@ -177,21 +174,26 @@ function Namecard(props) {
           <p style={location}>{props.location}</p>
         </div>
       </div>
-        <div style={sliderStyle}>
-          <p style={sliderLabel}>Logo Y axis</p>
-          <SliderComponent initialValue={logoY} onValueChange={setLogoY} />
-          <p style={sliderLabel}>Logo Size</p>
-          <SliderComponent
-            initialValue={logoSize}
-            onValueChange={setLogoSize}
-            min={10}
-            max={100}
-          />
-        </div>
+      <div style={sliderStyle}>
+        <p style={sliderLabel}>Logo Y axis</p>
+        <SliderComponent initialValue={logoY} onValueChange={setLogoY} />
+        <p style={sliderLabel}>Logo Size</p>
+        <SliderComponent
+          initialValue={logoSize}
+          onValueChange={setLogoSize}
+          min={10}
+          max={100}
+        />
+      </div>
       <div style={cardBack}>
-        <video style={video} src="nameCards/cardBack.mp4" autoPlay muted loop playsInline>
-
-        </video>
+        <video
+          style={video}
+          src="nameCards/cardBack.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        ></video>
       </div>
     </div>
   );
@@ -312,7 +314,10 @@ function App() {
   const addComponentBtn = {
     marginTop: "5em",
     fontSize: "1.5em",
-    fontFamily: "Roboto"
+    fontFamily: "Roboto",
+    background: "black",
+    color: "white",
+    borderRadius: "50px"
   };
   //-----------------------------------------------//
 
@@ -330,7 +335,7 @@ function App() {
         />
       ))}
       <button style={addComponentBtn} onClick={addComponent}>
-      ➕➕Component
+        ++ New Component ++
       </button>
     </div>
   );
@@ -347,7 +352,7 @@ root.render(
     </div>
     <div>
       <App />
-      <PaymentComponent/>
+      <PaymentComponent />
     </div>
   </>
 );
