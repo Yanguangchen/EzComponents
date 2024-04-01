@@ -35,7 +35,7 @@ function PaymentComponent() {
             <video src="Payments/MainVideo.mp4" autoPlay muted loop playsInline>
               Opps element isnt working
             </video>
-            <video src="Payments/MainVideo.mp4" autoPlay muted loop playsInline>
+            <video src="Payments/CCback.mp4" autoPlay muted loop playsInline>
               Opps element isnt working
             </video>
           </div>
