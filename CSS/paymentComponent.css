@@ -36,12 +36,12 @@
 }
 
 #payBtn > button {
-  background: #3c4042;
-  color: white;
   font-family: roboto;
   font-size: 2em;
-  border: 2px solid #3c4042;
+  border: 0.5px solid white;
+  padding: 0.3em;
   border-radius: 30px;
+  font-weight: 900;
 }
 
 h2 {
