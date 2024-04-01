@@ -153,7 +153,6 @@ function Namecard(props) {
     height: "12.6em",
     border: "1px solid black",
     paddingBottom: "3px",
-
     borderRadius: "0.825em",
 
   }
@@ -311,7 +310,9 @@ function App() {
   };
   //---CSS styling for the button itself
   const addComponentBtn = {
-    fontSize: "2em",
+    marginTop: "5em",
+    fontSize: "1.5em",
+    fontFamily: "Roboto"
   };
   //-----------------------------------------------//
 
@@ -329,7 +330,7 @@ function App() {
         />
       ))}
       <button style={addComponentBtn} onClick={addComponent}>
-        Add Component
+      ➕➕Component
       </button>
     </div>
   );
