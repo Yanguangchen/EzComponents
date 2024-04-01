@@ -6,7 +6,7 @@
 import React, { useState } from "react"; // Import React and useState together
 import ReactDOM from "react-dom/client";
 import SliderComponent from "./sliderComponent"; // Ensure the path is correct
-import PaymentComponent from "./payment";
+import { PaymentComponent, PaymentApp } from './payment';
 //--------------------------------------//
 
 function Namecard(props) {
@@ -360,6 +360,7 @@ root.render(
       <h1>Name card Components</h1>
       <App />
       <PaymentComponent />
+      <PaymentApp />
     </div>
   </>
 );

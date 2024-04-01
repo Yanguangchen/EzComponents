@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom/client";
-import React from "react";
+import React, { useState } from "react";
 
-function PaymentComponent() {
+export function PaymentComponent() {
   const paymentContainer = {
     display: "flex",
     justifyContent: "center",
@@ -72,7 +72,7 @@ function PaymentComponent() {
             <p></p>
           </div>
           <div id="payBtn">
-            <button>Pay</button>
+            <button className="namecardWrapper">Pay</button>
           </div>
         </form>
         <div></div>
@@ -81,4 +81,44 @@ function PaymentComponent() {
   );
 }
 
-export default PaymentComponent;
+export function PaymentApp() {
+  const addComponentBtn = {
+    marginTop: "5em",
+    fontSize: "1.5em",
+    fontFamily: "Roboto",
+    background: "black",
+    color: "white",
+    borderRadius: "50px",
+  };
+
+  const addComponentBtnDiv = {
+    fontFamily: "Roboto",
+    textAlign: "center",
+    marginBottom: "5em",
+  };
+
+  // State to keep track of the payment components array
+  const [paymentComponents, setPaymentComponents] = useState([]);
+
+  // Function to add a new PaymentComponent
+  const addPaymentComponent = () => {
+    setPaymentComponents((prevComponents) => [
+      ...prevComponents,
+      PaymentComponent,
+    ]);
+  };
+
+  return (
+    <div className="App">
+      {paymentComponents.map((Component, index) => (
+        // Render each PaymentComponent from the state array
+        <Component key={index} />
+      ))}{" "}
+      <div style={addComponentBtnDiv}>
+        <button onClick={addPaymentComponent} style={addComponentBtn}>
+          +++Add Payment Component+++
+        </button>
+      </div>
+    </div>
+  );
+}
