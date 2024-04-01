@@ -27,7 +27,7 @@ function Namecard(props) {
     //DISPLAY
     marginTop: "2em",
     //BORDERS
-    border: "1px solid black",
+    border: "1px solid gray",
     borderRadius: "0.725em",
     //SIZING
     width: "25em",
@@ -83,7 +83,7 @@ function Namecard(props) {
     //POSITIONING
     textAlign: "left",
     marginLeft: titleLeftMargin,
-    marginTop: "0.1875em",
+    marginTop: "0.7em",
     //FONT SETTINGS
     fontFamily: fontTitle,
     fontSize: titleSize,
@@ -99,6 +99,7 @@ function Namecard(props) {
     marginTop: "3.8em",
     marginLeft: contactLeftMargin, //DEFAULT 3.8em
     marginBottom: contactMarginBottom,
+    fontSize: "0.9em",
   };
 
   const Website = {
@@ -109,6 +110,7 @@ function Namecard(props) {
     marginTop: "0.7em",
     marginLeft: contactLeftMargin, //DEFAULT 3.8em
     marginBottom: contactMarginBottom,
+    fontSize: "0.9em",
   };
 
   const location = {
@@ -119,6 +121,7 @@ function Namecard(props) {
     marginBottom: contactMarginBottom,
     //FONT SETTINGS
     fontFamily: contactFont, //DEFAULT: Roboto
+    fontSize: "0.9em",
   };
 
   //-----SLIDER CSS CONTROL------//
@@ -317,7 +320,7 @@ function App() {
     fontFamily: "Roboto",
     background: "black",
     color: "white",
-    borderRadius: "50px"
+    borderRadius: "50px",
   };
   //-----------------------------------------------//
 
@@ -335,7 +338,7 @@ function App() {
         />
       ))}
       <button style={addComponentBtn} onClick={addComponent}>
-        ++ New Component ++
+        +++ New Component +++
       </button>
     </div>
   );
@@ -344,13 +347,17 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    <div className="xxx">
-      <h1 className="namecardWrapper">These are Reusable React Components</h1>
-      <p className="namecardWrapper">
-        Click "Add Component" to generate random namecards
+    <div className="banner">
+      <h1 className="namecardWrapper">EzComponents</h1>
+      <p id="subtitle" className="namecardWrapper">
+        Click "Add Component" to generate new components
+      </p>
+      <p id="subtitle" className="namecardWrapper">
+        Powered using React.Js
       </p>
     </div>
     <div>
+      <h1>Name card Components</h1>
       <App />
       <PaymentComponent />
     </div>
