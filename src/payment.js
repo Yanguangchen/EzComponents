@@ -35,40 +35,40 @@ function PaymentComponent() {
             <video src="Payments/MainVideo.mp4" autoPlay muted loop playsInline>
               Opps element isnt working
             </video>
-            <video src="Payments/cardFront.mp4" autoPlay muted loop playsInline>
+            <video src="Payments/MainVideo.mp4" autoPlay muted loop playsInline>
               Opps element isnt working
             </video>
           </div>
         </div>
         <form style={paymentForm} className="inputFormClass">
           <br></br>
-          <label for="fname">Card Name:</label>
+          <label>Card Name:</label>
           <br></br>
           <input type="text" id="fname" name="fname"></input>
 
-          <div class="formSpacing">
+          <div className="formSpacing">
             <p></p>
           </div>
 
-          <label for="cardNum">Card Number:</label>
+          <label>Card Number:</label>
           <br></br>
           <input type="password" id="cardNum" name="cardNum"></input>
-          <div class="formSpacing">
+          <div className="formSpacing">
             <p></p>
           </div>
 
-          <label for="CVC">CVC:</label>
+          <label>CVC:</label>
           <br></br>
           <input type="password" id="CVC" name="CVC"></input>
-          <div class="formSpacing">
+          <div className="formSpacing">
             <p></p>
           </div>
 
-          <label for="EXP">Expiration: MM/YYYY</label>
+          <label>Expiration: MM/YYYY</label>
           <br></br>
           <input type="text" id="Expiration" name="Expiration"></input>
           <br></br>
-          <div class="formSpacing">
+          <div className="formSpacing">
             <p></p>
           </div>
           <div id="payBtn">
