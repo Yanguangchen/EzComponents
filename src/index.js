@@ -348,11 +348,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
     <div className="banner">
-      <h1 className="namecardWrapper">EzComponents</h1>
-      <p id="subtitle" className="namecardWrapper">
+      <p id="subtitle">
         Click "Add Component" to generate new components
       </p>
-      <p id="subtitle" className="namecardWrapper">
+      <p id="subtitle">
         Powered using React.Js
       </p>
     </div>
