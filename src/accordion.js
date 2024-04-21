@@ -31,11 +31,12 @@ function Accordion() {
     color: "white",
     fontFamily: "roboto",
     border: "none",
-    borderRadius: "20px",
-    padding: "10px",
+    borderRadius: "15px",
+    padding: "40px",
     margin: "5px",
     width: "50%",
     cursor: "pointer",
+    marginTop: "2em",
   };
 
   const buttonStyle = {
@@ -72,6 +73,22 @@ function Accordion() {
     setSections([...sections, newSection]);
   };
 
+  const addComponentBtnAccordion = {
+    marginTop: "2em",
+    fontSize: "1.5em",
+    fontFamily: "Roboto",
+    background: "black",
+    color: "white",
+    borderRadius: "50px",
+    width: "30%",
+  }
+
+  const addComponentBtnDivAccordion = {
+    fontFamily: "Roboto",
+    textAlign: "center",
+    marginBottom: "5em",
+  };
+
 
   const renderSection = (section, index) => (
     <div className={Accordion} style={flexContainerAccordion}>
@@ -88,9 +105,12 @@ function Accordion() {
   );
   return (
     <div>
+      <h1>Accordion Component</h1>
       {sections.map(renderSection)}
-      <button onClick={addSection}>Add Section</button>
-    </div>
+      <div style={addComponentBtnDivAccordion}>
+        <button style={addComponentBtnAccordion} onClick={addSection}>   +++Add Section+++   </button>
+        </div>
+        </div>
   );
 }
 export default Accordion;

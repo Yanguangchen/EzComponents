@@ -349,10 +349,6 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    <div className="banner">
-      <p id="subtitle">Click "Add Component" to generate new components</p>
-      <p id="subtitle">Powered using React.Js</p>
-    </div>
     <div>
       <h1>Name card Components</h1>
       <App />
