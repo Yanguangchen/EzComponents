@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 function Accordion() {
   const [activeIndex, setActiveIndex] = useState(-1);
   const [sections, setSections] = useState([
@@ -31,7 +32,7 @@ function Accordion() {
     color: "white",
     fontFamily: "roboto",
     border: "none",
-    borderRadius: "15px",
+    borderRadius: "20px",
     padding: "40px",
     margin: "5px",
     width: "50%",
@@ -40,7 +41,7 @@ function Accordion() {
   };
 
   const buttonStyle = {
-    backgroundColor: "black",
+    backgroundColor: "transparent",
     color: "white",
     fontFamily: "roboto",
     border: "none",

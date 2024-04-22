@@ -7,7 +7,7 @@ import React, { useState } from "react"; // Import React and useState together
 import ReactDOM from "react-dom/client";
 import SliderComponent from "./sliderComponent"; // Ensure the path is correct
 import { PaymentComponent, PaymentApp } from "./payment";
-import AccordionComponent from './accordion';
+import AccordionComponent from "./accordion";
 //--------------------------------------//
 
 function Namecard(props) {
@@ -306,7 +306,6 @@ function App() {
     };
     setComponents([...components, newUser]);
   };
-  
 
   //-----CSS CONTROL FOR ADDING NEW COMPONENTS-----//
   //---Container that wraps the container
