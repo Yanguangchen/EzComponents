@@ -8,6 +8,9 @@ import ReactDOM from "react-dom/client";
 import SliderComponent from "./sliderComponent"; // Ensure the path is correct
 import { PaymentComponent, PaymentApp } from "./payment";
 import AccordionComponent from "./accordion";
+import RequirementsVideo from "./requirementsVideo";
+import NavbarComponent from "./navbar";
+import VideoComponent from "./video";
 //--------------------------------------//
 
 function Namecard(props) {
@@ -349,11 +352,15 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
     <div>
+      <h1>Navigation Bar Component</h1>
+      <NavbarComponent />
       <h1>Name card Components</h1>
       <App />
+      <RequirementsVideo />
       <PaymentComponent />
       <PaymentApp />
       <AccordionComponent />
+      <VideoComponent />
     </div>
   </>
 );

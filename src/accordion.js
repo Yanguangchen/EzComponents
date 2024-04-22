@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 function Accordion() {
   const [activeIndex, setActiveIndex] = useState(-1);
   const [sections, setSections] = useState([
@@ -28,7 +27,7 @@ function Accordion() {
   ]);
 
   const panelStyle = {
-    backgroundColor: "black",
+    backgroundColor: "#503C3C",
     color: "white",
     fontFamily: "roboto",
     border: "none",
@@ -57,7 +56,7 @@ function Accordion() {
   };
 
   const contentStyle = {
-    backgroundColor: "black",
+    backgroundColor: "#3E3232",
     color: "white",
     fontFamily: "roboto",
     padding: "10px",
@@ -82,14 +81,13 @@ function Accordion() {
     color: "white",
     borderRadius: "50px",
     width: "30%",
-  }
+  };
 
   const addComponentBtnDivAccordion = {
     fontFamily: "Roboto",
     textAlign: "center",
     marginBottom: "5em",
   };
-
 
   const renderSection = (section, index) => (
     <div className={Accordion} style={flexContainerAccordion}>
@@ -102,16 +100,18 @@ function Accordion() {
         )}
       </div>
     </div>
-
   );
   return (
     <div>
       <h1>Accordion Component</h1>
       {sections.map(renderSection)}
       <div style={addComponentBtnDivAccordion}>
-        <button style={addComponentBtnAccordion} onClick={addSection}>   +++Add Section+++   </button>
-        </div>
-        </div>
+        <button style={addComponentBtnAccordion} onClick={addSection}>
+          {" "}
+          +++Add Section+++{" "}
+        </button>
+      </div>
+    </div>
   );
 }
 export default Accordion;
