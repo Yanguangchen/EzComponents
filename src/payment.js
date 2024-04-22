@@ -25,10 +25,9 @@ export function PaymentComponent() {
     flexDirection: "column",
   };
 
-  const cardImage = {};
   return (
     <div className="PaymentComponentWrapper">
-      <h2>💳💳Payment Component💳💳</h2>
+      <h2 id={"payment"} >💳💳Payment Component💳💳</h2>
       <div style={paymentContainer}>
         <div style={cardVideo}>
           <div style={flexCardVideo}>

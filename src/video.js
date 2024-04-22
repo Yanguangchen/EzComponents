@@ -49,7 +49,7 @@ function VideoComponentWrapper() {
   const [count, setCount] = useState(1);
 
   return (
-    <div style={addComponentBtnDiv}>
+    <div style={addComponentBtnDiv} id={"videoId"}>
       {[...Array(count)].map((_, i) => (
         <VideoComponent key={i} />
       ))}

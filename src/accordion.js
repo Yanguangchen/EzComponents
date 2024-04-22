@@ -103,7 +103,7 @@ function Accordion() {
   );
   return (
     <div>
-      <h1>Accordion Component</h1>
+      <h1 id={"AccordionId"}> Accordion Component</h1>
       {sections.map(renderSection)}
       <div style={addComponentBtnDivAccordion}>
         <button style={addComponentBtnAccordion} onClick={addSection}>

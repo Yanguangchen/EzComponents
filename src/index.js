@@ -352,9 +352,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
     <div>
-      <h1>Navigation Bar Component</h1>
+      <h1 id={"navibar"}>Navigation Bar Component</h1>
       <NavbarComponent />
-      <h1>Name card Components</h1>
+      <h1 id={"namecard"}>Name card Components</h1>
       <App />
       <RequirementsVideo />
       <PaymentComponent />
