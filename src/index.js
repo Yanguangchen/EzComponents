@@ -10,7 +10,7 @@ import { PaymentComponent, PaymentApp } from "./payment";
 import AccordionComponent from "./accordion";
 import RequirementsVideo from "./requirementsVideo";
 import NavbarComponent from "./navbar";
-import VideoComponent from "./video";
+import VideoComponentWrapper from "./video";
 //--------------------------------------//
 
 function Namecard(props) {
@@ -360,7 +360,7 @@ root.render(
       <PaymentComponent />
       <PaymentApp />
       <AccordionComponent />
-      <VideoComponent />
+      <VideoComponentWrapper />
     </div>
   </>
 );

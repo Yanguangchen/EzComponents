@@ -10,11 +10,18 @@ function RequirementsVideo() {
   const videoStylevideo = {
     width: "50%",
     borderRadius: "5R0px",
-  }
+  };
 
   return (
     <div style={videoStyle}>
-      <video style={videoStylevideo} src={videoSource} loop autoPlay muted playsInline>
+      <video
+        style={videoStylevideo}
+        src={videoSource}
+        loop
+        autoPlay
+        muted
+        playsInline
+      >
         Opps element isnt working
       </video>
     </div>
