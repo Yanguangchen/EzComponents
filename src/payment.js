@@ -14,7 +14,7 @@ export function PaymentComponent() {
 
   const paymentForm = {
     fontFamily: "Roboto",
-    background: "black",
+    background: "#222831",
     color: "white",
     borderRadius: "40px",
     padding: "2em",
