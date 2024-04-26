@@ -38,7 +38,7 @@ export function PaymentComponent() {
     fontFamily: "Roboto",
     textAlign: "center",
     marginBottom: "5em",
-  }
+  };
 
   const payBtn = {
     fontFamily: "roboto",
@@ -47,22 +47,42 @@ export function PaymentComponent() {
     padding: "0.3em",
     borderRadius: "30px",
     fontWeight: "900",
-  }
+  };
 
-  const payBtnDiv =  {
+  const payBtnDiv = {
     display: "grid",
     marginBottom: "3em",
     height: "2em",
     fontFamily: "Roboto, arial",
-  }
+  };
 
   const formSpacing = {
     marginTop: "1.5em",
-  }
- 
+  };
+
+  const inputFromClassInput = {
+    width: "25em",
+    height: "2em",
+    fontSize: "1em",
+    marginBottom: "4em",
+  };
+
+  const inputFromClass = {
+    display: "grid !important",
+    justifyContent: "center",
+    alignItems: "center",
+  };
+
+  const labelMarginTop = {
+    marginTop: "1em",
+  };
+
   return (
     <div className="PaymentComponentWrapper">
-      <h2 id={"payment"} style={h2StylePayment}> 💳💳Payment Component💳💳</h2>
+      <h2 id={"payment"} style={h2StylePayment}>
+        {" "}
+        💳💳Payment Component💳💳
+      </h2>
       <div style={paymentContainer}>
         <div style={cardVideo}>
           <div style={flexCardVideo}>
@@ -74,39 +94,61 @@ export function PaymentComponent() {
             </video>
           </div>
         </div>
-        <form style={paymentForm} className="inputFormClass">
+        <form style={paymentForm} className={inputFromClass}>
           <br></br>
-          <label>Card Name:</label>
+          <label style={labelMarginTop}>Card Name:</label>
           <br></br>
-          <input type="text" id="fname" name="fname"></input>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            style={inputFromClassInput}
+          ></input>
 
+          <div style={formSpacing}>
+            <p></p>
+          </div>
+
+          <label style={labelMarginTop}>Card Number:</label>
+          <br></br>
+          <input
+            type="password"
+            id="cardNum"
+            name="cardNum"
+            style={inputFromClassInput}
+          ></input>
           <div className="formSpacing">
             <p></p>
           </div>
 
-          <label>Card Number:</label>
+          <label style={labelMarginTop}>CVC:</label>
           <br></br>
-          <input type="password" id="cardNum" name="cardNum"></input>
+          <input
+            type="password"
+            id={CVC}
+            name="CVC"
+            style={inputFromClassInput}
+          ></input>
           <div className="formSpacing">
             <p></p>
           </div>
 
-          <label>CVC:</label>
+          <label style={labelMarginTop}>Expiration: MM/YYYY</label>
           <br></br>
-          <input type="password" id={CVC} name="CVC"></input>
-          <div className="formSpacing">
-            <p></p>
-          </div>
-
-          <label>Expiration: MM/YYYY</label>
-          <br></br>
-          <input type="text" id={Expiration} name="Expiration"></input>
+          <input
+            type="text"
+            id={Expiration}
+            name="Expiration"
+            style={inputFromClassInput}
+          ></input>
           <br></br>
           <div className="formSpacing">
             <p></p>
           </div>
           <div style={payBtnDiv}>
-            <button style={payBtn} className="namecardWrapper">Pay</button>
+            <button style={payBtn} className="namecardWrapper">
+              Pay
+            </button>
           </div>
         </form>
         <div></div>
