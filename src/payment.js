@@ -25,9 +25,44 @@ export function PaymentComponent() {
     flexDirection: "column",
   };
 
+  const CVC = {
+    width: "5em",
+  };
+
+  const Expiration = {
+    width: "10em",
+  };
+
+  const h2StylePayment = {
+    marginTop: "10em",
+    fontFamily: "Roboto",
+    textAlign: "center",
+    marginBottom: "5em",
+  }
+
+  const payBtn = {
+    fontFamily: "roboto",
+    fontSize: "2em",
+    border: "0.5px solid white",
+    padding: "0.3em",
+    borderRadius: "30px",
+    fontWeight: "900",
+  }
+
+  const payBtnDiv =  {
+    display: "grid",
+    marginBottom: "3em",
+    height: "2em",
+    fontFamily: "Roboto, arial",
+  }
+
+  const formSpacing = {
+    marginTop: "1.5em",
+  }
+ 
   return (
     <div className="PaymentComponentWrapper">
-      <h2 id={"payment"} >💳💳Payment Component💳💳</h2>
+      <h2 id={"payment"} style={h2StylePayment}> 💳💳Payment Component💳💳</h2>
       <div style={paymentContainer}>
         <div style={cardVideo}>
           <div style={flexCardVideo}>
@@ -58,20 +93,20 @@ export function PaymentComponent() {
 
           <label>CVC:</label>
           <br></br>
-          <input type="password" id="CVC" name="CVC"></input>
+          <input type="password" id={CVC} name="CVC"></input>
           <div className="formSpacing">
             <p></p>
           </div>
 
           <label>Expiration: MM/YYYY</label>
           <br></br>
-          <input type="text" id="Expiration" name="Expiration"></input>
+          <input type="text" id={Expiration} name="Expiration"></input>
           <br></br>
           <div className="formSpacing">
             <p></p>
           </div>
-          <div id="payBtn">
-            <button className="namecardWrapper">Pay</button>
+          <div style={payBtnDiv}>
+            <button style={payBtn} className="namecardWrapper">Pay</button>
           </div>
         </form>
         <div></div>
@@ -95,7 +130,6 @@ export function PaymentApp() {
     textAlign: "center",
     marginBottom: "5em",
   };
-
   // State to keep track of the payment components array
   const [paymentComponents, setPaymentComponents] = useState([]);
 
