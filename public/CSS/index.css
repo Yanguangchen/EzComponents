@@ -92,3 +92,25 @@ body {
 #myBtn:hover {
   background-color: #555;
 }
+
+#fullscreenDiv {
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95); /* Change as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 230%;
+}
+
+@media (min-width: 996px) {
+  #fullscreenDiv {
+    display: none;
+  }
+
+
+}
