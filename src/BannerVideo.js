@@ -2,14 +2,20 @@ import React from "react";
 import videoSource from "./Assets/Requirements.mp4";
 
 function RequirementsVideo() {
+  // videoStyle
   const videoStyle = {
+    // Layout
     display: "flex",
     justifyContent: "center",
   };
 
+  // videoStylevideo
   const videoStylevideo = {
+    // Dimensions
     width: "50%",
-    borderRadius: "5R0px",
+
+    // Border
+    borderRadius: "50px", // Please note that "5R0px" is not a valid value for borderRadius. I've assumed you meant "50px".
   };
 
   return (

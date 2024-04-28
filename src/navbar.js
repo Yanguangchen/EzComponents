@@ -1,19 +1,25 @@
 import React, { useState } from "react";
 import companyLogo from "./Assets/webwizards.png";
 
+//-----------------CSS styling for the payment component-----------------
+
 const topNavigation = {
+  // Color
   backgroundColor: "#00224D",
+  // Positioning and layout
   overflow: "hidden",
   marginBottom: "2em",
 };
 
 const topNavigationA = {
+  // Display and typography
   display: "inline-block",
   color: "#f2f2f2",
   textAlign: "center",
   padding: "14px 40px",
   textDecoration: "none",
   fontFamily: "League Spartan",
+  // Hover effect
   ":hover": {
     backgroundColor: "#1D267D",
     color: "black",
@@ -21,26 +27,34 @@ const topNavigationA = {
 };
 
 const navlinks = {
+  // Layout
   display: "flex",
   justifyContent: "center",
+  // Borders
   borderLeft: "1px solid gray",
-  borderRoght: "1px solid gray",
+  borderRight: "1px solid gray",
+  // Typography
   fontSize: "1.5em",
 };
 
 const banner = {
+  // Color
   backgroundColor: "white",
   color: "white",
+  // Layout
   margin: "0",
   padding: "0",
   display: "flex",
   justifyContent: "center",
+  // Borders
   borderTop: "1px solid #00224D",
 };
 
 const logoStyle = {
   width: "20%",
 };
+
+//-----------------END CSS styling for the payment component-----------------
 
 function NavbarComponent() {
   return (
@@ -78,18 +92,25 @@ function NavbarApp() {
     setCount(count + 1);
   };
 
+  // CSS styling for the button itself
   const addComponentBtnDiv = {
+    // Typography
     fontFamily: "Roboto",
+    // Layout
     textAlign: "center",
     marginBottom: "5em",
   };
-  //---CSS styling for the button itself
+
   const addComponentBtn = {
+    // Layout
     marginTop: "2em",
+    // Typography
     fontSize: "1.5em",
     fontFamily: "Roboto",
+    // Color
     background: "black",
     color: "white",
+    // Borders
     borderRadius: "50px",
   };
 

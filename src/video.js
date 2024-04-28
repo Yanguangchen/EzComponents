@@ -2,15 +2,24 @@ import React, { useState } from "react";
 import videoSource3 from "./Assets/videoComponentShowcase.mp4";
 
 function VideoComponent() {
+  //-----------------CSS styling for the video component-----------------
+  // flexContainer
   const flexContainer = {
+    // Layout
     display: "flex",
     justifyContent: "center",
   };
 
+  // videoWrapper
   const videoWrapper = {
+    // Dimensions
     width: "60%",
+
+    // Border
     borderRadius: "40px",
   };
+
+  //-----------------END CSS styling for the video component-----------------
 
   return (
     <div>
@@ -32,20 +41,33 @@ function VideoComponent() {
 }
 
 function VideoComponentWrapper() {
+  // addComponentBtnDiv
   const addComponentBtnDiv = {
+    // Typography
     fontFamily: "Roboto",
     textAlign: "center",
+
+    // Spacing
     marginBottom: "5em",
   };
-  //---CSS styling for the button itself
+
+  // addComponentBtn
   const addComponentBtn = {
+    // Spacing
     marginTop: "5em",
+
+    // Typography
     fontSize: "1.5em",
     fontFamily: "Roboto",
+
+    // Color
     background: "black",
     color: "white",
+
+    // Border
     borderRadius: "50px",
   };
+
   const [count, setCount] = useState(1);
 
   return (

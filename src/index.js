@@ -46,7 +46,6 @@ function Namecard(props) {
     //TEXT
     fontFamily: fontName,
     textAlign: "left",
-    fontFamily: "Roboto",
     fontSize: "120%",
     fontWeight: "600",
 

@@ -1,81 +1,129 @@
-import ReactDOM from "react-dom/client";
 import React, { useState } from "react";
 
 export function PaymentComponent() {
+
+  //-----------------CSS styling for the payment component-----------------
+  // paymentContainer
   const paymentContainer = {
+    // Layout
     display: "flex",
     justifyContent: "center",
   };
 
+  // cardVideo
   const cardVideo = {
+    // Layout
     justifyContent: "center",
     alignItems: "center",
   };
 
+  // paymentForm
   const paymentForm = {
+    // Typography
     fontFamily: "Roboto",
+
+    // Color
     background: "#222831",
     color: "white",
+
+    // Border
     borderRadius: "40px",
+
+    // Spacing
     padding: "2em",
   };
 
+  // flexCardVideo
   const flexCardVideo = {
+    // Layout
     display: "flex",
     flexDirection: "column",
   };
 
+  // CVC
   const CVC = {
+    // Dimensions
     width: "5em",
   };
 
+  // Expiration
   const Expiration = {
+    // Dimensions
     width: "10em",
   };
 
+  // h2StylePayment
   const h2StylePayment = {
+    // Spacing
     marginTop: "10em",
+    marginBottom: "5em",
+
+    // Typography
     fontFamily: "Roboto",
     textAlign: "center",
-    marginBottom: "5em",
   };
 
+  // payBtn
   const payBtn = {
+    // Typography
     fontFamily: "roboto",
     fontSize: "2em",
-    border: "0.5px solid white",
-    padding: "0.3em",
-    borderRadius: "30px",
     fontWeight: "900",
+
+    // Border
+    border: "0.5px solid white",
+    borderRadius: "30px",
+
+    // Spacing
+    padding: "0.3em",
   };
 
+  // payBtnDiv
   const payBtnDiv = {
+    // Layout
     display: "grid",
+
+    // Spacing
     marginBottom: "3em",
     height: "2em",
+
+    // Typography
     fontFamily: "Roboto, arial",
   };
 
+  // formSpacing
   const formSpacing = {
+    // Spacing
     marginTop: "1.5em",
   };
 
+  // inputFromClassInput
   const inputFromClassInput = {
+    // Dimensions
     width: "25em",
     height: "2em",
+
+    // Typography
     fontSize: "1em",
+
+    // Spacing
     marginBottom: "4em",
   };
 
+  // inputFromClass
   const inputFromClass = {
+    // Layout
     display: "grid !important",
     justifyContent: "center",
     alignItems: "center",
   };
 
+  // labelMarginTop
   const labelMarginTop = {
+    // Spacing
     marginTop: "1em",
   };
+    //-----------------END CSS styling for the payment component-----------------
 
   return (
     <div className="PaymentComponentWrapper">
@@ -158,18 +206,30 @@ export function PaymentComponent() {
 }
 
 export function PaymentApp() {
+  // addComponentBtn
   const addComponentBtn = {
+    // Spacing
     marginTop: "5em",
+
+    // Typography
     fontSize: "1.5em",
     fontFamily: "Roboto",
+
+    // Color
     background: "black",
     color: "white",
+
+    // Border
     borderRadius: "50px",
   };
 
+  // addComponentBtnDiv
   const addComponentBtnDiv = {
+    // Typography
     fontFamily: "Roboto",
     textAlign: "center",
+
+    // Spacing
     marginBottom: "5em",
   };
   // State to keep track of the payment components array
