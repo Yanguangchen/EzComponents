@@ -27,12 +27,12 @@ body {
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #ddd;
-  color: #1B4242;
+  color: #1b4242;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #1B4242;
+  background-color: #1b4242;
   color: white;
 }
 
@@ -43,7 +43,7 @@ body {
   background: black;
 }
 
-.topbannervideo>video {
+.topbannervideo > video {
   width: 20%;
 }
 
@@ -68,7 +68,7 @@ body {
   justify-content: center;
 }
 
-.logoWrapper>video {
+.logoWrapper > video {
   width: 20%;
   margin-bottom: 3%;
 }
@@ -91,4 +91,24 @@ body {
 
 #myBtn:hover {
   background-color: #555;
+}
+
+#fullscreenDiv {
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95); /* Change as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 230%;
+}
+
+@media (min-width: 996px) {
+  #fullscreenDiv {
+    display: none;
+  }
 }
