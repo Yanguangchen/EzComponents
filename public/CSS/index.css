@@ -8,6 +8,7 @@ body {
   font-family: "League Spartan", Roboto, Arial;
 }
 
+/* Navigation bar -------------------------------------*/
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #092635;
@@ -19,7 +20,7 @@ body {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 20px;
   text-decoration: none;
   font-size: 17px;
   font-family: "League Spartan", Roboto, Arial;
@@ -102,7 +103,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.50); /* Change as needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Change as needed */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,11 +115,25 @@ body {
   .cardBack {
     display: none;
   }
-}
-
-@media (max-width: 993px) {
   .cardVideo {
     display: none;
+  }
+  .topnav {
+    background-color: #092635;
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+  }
+  .banner {
+    color: white;
+    background: #00343b;
+    width: 50%;
+    margin-top: 2em;
+    border: 1px solid #00343b;
+    border-radius: 13px;
+    margin-bottom: 7em;
+    margin-top: 7em;
+    font-size: 0.8em;
   }
 }
 
