@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export function PaymentComponent() {
-
   //-----------------CSS styling for the payment component-----------------
   // paymentContainer
   const paymentContainer = {
@@ -19,6 +18,9 @@ export function PaymentComponent() {
 
   // paymentForm
   const paymentForm = {
+    display: "grid !important",
+    justifyContent: "center",
+    alignItems: "center",
     // Typography
     fontFamily: "Roboto",
 
@@ -100,7 +102,7 @@ export function PaymentComponent() {
   // inputFromClassInput
   const inputFromClassInput = {
     // Dimensions
-    width: "25em",
+    width: "20em",
     height: "2em",
 
     // Typography
@@ -110,20 +112,12 @@ export function PaymentComponent() {
     marginBottom: "4em",
   };
 
-  // inputFromClass
-  const inputFromClass = {
-    // Layout
-    display: "grid !important",
-    justifyContent: "center",
-    alignItems: "center",
-  };
-
   // labelMarginTop
   const labelMarginTop = {
     // Spacing
     marginTop: "1em",
   };
-    //-----------------END CSS styling for the payment component-----------------
+  //-----------------END CSS styling for the payment component-----------------
 
   return (
     <div className="PaymentComponentWrapper">
@@ -132,7 +126,7 @@ export function PaymentComponent() {
         💳💳Payment Component💳💳
       </h2>
       <div style={paymentContainer}>
-        <div style={cardVideo}>
+        <div style={cardVideo} className="cardVideo">
           <div style={flexCardVideo}>
             <video src="Payments/MainVideo.mp4" autoPlay muted loop playsInline>
               Opps element isnt working
@@ -142,7 +136,7 @@ export function PaymentComponent() {
             </video>
           </div>
         </div>
-        <form style={paymentForm} className={inputFromClass}>
+        <form style={paymentForm} className="inputFromClass">
           <br></br>
           <label style={labelMarginTop}>Card Name:</label>
           <br></br>

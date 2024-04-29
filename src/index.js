@@ -39,6 +39,7 @@ function Namecard(props) {
     //TEXT
     textAlign: "center",
     position: "relative",
+    objectFit: "scale-down",
   };
 
   //NAME-----------------------//
@@ -90,7 +91,7 @@ function Namecard(props) {
     //FONT SETTINGS
     fontFamily: fontTitle,
     fontSize: titleSize,
-    color: "gray",
+    color: "#003C43",
   };
 
   //CONTACT DETAILS
@@ -138,7 +139,7 @@ function Namecard(props) {
   const sliderLabel = {
     padding: "0",
     margin: "0",
-    fontFamily: "Roboto",
+    fontFamily: "League Spartan",
     textAlign: "center",
   };
 
@@ -153,7 +154,6 @@ function Namecard(props) {
 
   const video = {
     width: "100%",
-    width: "25em",
     height: "12.6em",
     border: "1px solid black",
     paddingBottom: "3px",
@@ -180,7 +180,7 @@ function Namecard(props) {
           <p style={location}>{props.location}</p>
         </div>
       </div>
-      <div style={sliderStyle}>
+      <div style={sliderStyle} className="sliderNameCard">
         <p style={sliderLabel}>Logo Y axis</p>
         <SliderComponent initialValue={logoY} onValueChange={setLogoY} />
         <p style={sliderLabel}>Logo Size</p>
@@ -191,7 +191,7 @@ function Namecard(props) {
           max={100}
         />
       </div>
-      <div style={cardBack}>
+      <div style={cardBack} className="cardBack">
         <video
           style={video}
           src="nameCards/cardBack.mp4"
@@ -211,8 +211,8 @@ function Namecard(props) {
 //COMPANY LOGO
 var logoSize = "10%"; // DEFAULT 10%
 //-------NAME-----------------------------------------//
-var fontName = "Roboto"; // DEFAULT Roboto
-var fontTitle = "monospace"; // DEFAULT MONOSPACE
+var fontName = "League Spartan"; // DEFAULT Roboto
+var fontTitle = "League Spartan"; // DEFAULT MONOSPACE
 //-------TITLE----------------------------------------//
 var titleSize = "90%"; // DEFUALT 80%
 var titleLeftMargin = "2.1em"; // DEFAULT 2.1em
@@ -321,7 +321,7 @@ function App() {
     marginTop: "5em",
     fontSize: "1.5em",
     fontFamily: "Roboto",
-    background: "black",
+    background: "#003C43",
     color: "white",
     borderRadius: "50px",
   };

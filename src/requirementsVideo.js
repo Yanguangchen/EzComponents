@@ -6,17 +6,18 @@ function RequirementsVideo() {
   const videoStyle = {
     display: "flex",
     justifyContent: "center",
-    columnGap: "10em",
+    columnGap: "10%",
   };
 
   const videoStylevideo = {
     width: "40%",
-    border: "1px solid black",
+    border: "2px solid white",
+    borderRadius: "50px",
   };
 
   const componentWrapper = {
     marginBottom: "5em",
-    backgroundColor: "black",
+    backgroundColor: "#00343B",
     paddingTop: "2em",
     paddingBottom: "2em",
   };
