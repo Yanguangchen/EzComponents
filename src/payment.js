@@ -23,7 +23,7 @@ export function PaymentComponent() {
     fontFamily: "Roboto",
 
     // Color
-    background: "#222831",
+    background: "black",
     color: "white",
 
     // Border

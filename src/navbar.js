@@ -5,7 +5,7 @@ import companyLogo from "./Assets/webwizards.png";
 
 const topNavigation = {
   // Color
-  backgroundColor: "#00224D",
+  backgroundColor: "#135D66",
   // Positioning and layout
   overflow: "hidden",
   marginBottom: "2em",
@@ -14,7 +14,7 @@ const topNavigation = {
 const topNavigationA = {
   // Display and typography
   display: "inline-block",
-  color: "#f2f2f2",
+  color: "white",
   textAlign: "center",
   padding: "14px 40px",
   textDecoration: "none",
@@ -39,11 +39,11 @@ const navlinks = {
 
 const banner = {
   // Color
-  backgroundColor: "white",
+  backgroundColor: "#003C43",
   color: "white",
   // Layout
   margin: "0",
-  padding: "0",
+  paddingTop:"1.1em",
   display: "flex",
   justifyContent: "center",
   // Borders
