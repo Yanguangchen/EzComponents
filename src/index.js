@@ -354,6 +354,8 @@ root.render(
   <>
     <div>
       <RequirementsVideo />
+      <h1 id={"gridComponent"}>Grid Component</h1>
+      <GridContainer />
       <h1 id={"navibar"}>Navigation Bar Component</h1>
       <NavbarComponent />
       <h1 id={"namecard"}>Name card Components</h1>
@@ -363,7 +365,6 @@ root.render(
       <PaymentComponent />
       <PaymentApp />
       <AccordionComponent />
-      <GridContainer />
       <VideoComponentWrapper />
     </div>
   </>

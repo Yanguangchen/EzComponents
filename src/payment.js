@@ -144,6 +144,7 @@ export function PaymentComponent() {
             type="text"
             id="fname"
             name="fname"
+            className="inputField"
             style={inputFromClassInput}
           ></input>
 
@@ -158,6 +159,7 @@ export function PaymentComponent() {
             id="cardNum"
             name="cardNum"
             style={inputFromClassInput}
+            className="inputField"
           ></input>
           <div className="formSpacing">
             <p></p>
@@ -170,6 +172,7 @@ export function PaymentComponent() {
             id={CVC}
             name="CVC"
             style={inputFromClassInput}
+            className="inputField"
           ></input>
           <div className="formSpacing">
             <p></p>
@@ -182,6 +185,7 @@ export function PaymentComponent() {
             id={Expiration}
             name="Expiration"
             style={inputFromClassInput}
+            className="inputField"
           ></input>
           <br></br>
           <div className="formSpacing">

@@ -80,7 +80,7 @@ function Accordion() {
     background: "#003C43",
     color: "white",
     borderRadius: "50px",
-    width: "30%",
+    width: "40%",
   };
 
   const addComponentBtnDivAccordion = {

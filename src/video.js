@@ -76,7 +76,7 @@ function VideoComponentWrapper() {
     fontFamily: "Roboto",
 
     // Color
-    background: "black",
+    background: "#092635",
     color: "white",
 
     // Border

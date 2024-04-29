@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function FooterComponent() {
   const footerStyle = {
@@ -116,40 +116,41 @@ function FooterComponent() {
 }
 
 function FooterApp() {
+  const addComponentBtnDiv = {
+    fontFamily: "League Spartan",
+    textAlign: "center",
+    marginBottom: "5em",
+  };
+  //---CSS styling for the button itself
+  const addComponentBtn = {
+    marginTop: "5em",
+    fontSize: "1.5em",
+    fontFamily: "League Spartan",
+    background: "#003C43",
+    color: "white",
+    borderRadius: "50px",
+  };
 
-    const addComponentBtnDiv = {
-        fontFamily: "League Spartan",
-        textAlign: "center",
-        marginBottom: "5em",
-      };
-      //---CSS styling for the button itself
-      const addComponentBtn = {
-        marginTop: "5em",
-        fontSize: "1.5em",
-        fontFamily: "League Spartan",
-        background: "#003C43",
-        color: "white",
-        borderRadius: "50px",
-      };
+  const [footerCount, setFooterCount] = useState(1);
 
-    const [footerCount, setFooterCount] = useState(1);
-  
-    const addFooter = () => {
-      setFooterCount(footerCount + 1);
-    };
-  
-    return (
-      <div style={addComponentBtnDiv}>
-        {/* Generate the footers */}
-        {[...Array(footerCount)].map((_, i) => (
-          <FooterComponent key={i} />
-        ))}
-  
-        {/* Button to add more footers */}
-        <button style={addComponentBtn} onClick={addFooter}>   +++Add Footer+++   </button>
-      </div>
-    );
-  }
-  
+  const addFooter = () => {
+    setFooterCount(footerCount + 1);
+  };
+
+  return (
+    <div style={addComponentBtnDiv}>
+      {/* Generate the footers */}
+      {[...Array(footerCount)].map((_, i) => (
+        <FooterComponent key={i} />
+      ))}
+
+      {/* Button to add more footers */}
+      <button style={addComponentBtn} onClick={addFooter}>
+        {" "}
+        +++Add Footer+++{" "}
+      </button>
+    </div>
+  );
+}
+
 export default FooterApp;
-
