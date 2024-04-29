@@ -11,11 +11,15 @@ function RequirementsVideo() {
 
   const videoStylevideo = {
     width: "40%",
-    borderRadius: "30px",
     border: "1px solid black",
   };
 
-  const componentWrapper = {};
+  const componentWrapper = {
+    marginBottom: "5em",
+    backgroundColor: "black",
+    paddingTop: "2em",
+    paddingBottom: "2em",
+  };
 
   return (
     <div style={componentWrapper}>

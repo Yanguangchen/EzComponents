@@ -351,11 +351,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
     <div>
+      <RequirementsVideo />
       <h1 id={"navibar"}>Navigation Bar Component</h1>
       <NavbarComponent />
       <h1 id={"namecard"}>Name card Components</h1>
       <App />
-      <RequirementsVideo />
       <PaymentComponent />
       <PaymentApp />
       <AccordionComponent />
