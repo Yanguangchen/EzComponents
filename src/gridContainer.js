@@ -19,17 +19,38 @@ function GridContainer() {
         border: "1px solid black",
         padding: "10px",
         textAlign: "center",
-        borderRadius: "10%"
     }
+
+    const bottomContent = {
+
+    }
+
+    const topContent = {
+        width: "100%",
+    }
+
     return (
         <div style={containerWrapper}>
             <div style={gridContainerStyle}>
                 <div style={gridItem}>
-                    <h1>container1</h1>
+                    <div style={topContent}>
+                        <img src="https://via.placeholder.com/150" alt="placeholder" />
+                    </div>
+                    <div style={bottomContent}>
+                        <h1>container 1</h1>
+                        <p>Web Wizards, the creator of EzComponents and Ezalgo, is the your go to agency for any of your web development needsß</p>
+                    </div>
                 </div>
                 <div style={gridItem}>
-                    <h1>container2</h1>
+                    <div style={topContent}>
+                        <img src="https://via.placeholder.com/150" alt="placeholder" />
+                    </div>
+                    <div style={bottomContent}>
+                        <h1>container 2</h1>
+                        <p>Web Wizards, the creator of EzComponents and Ezalgo, is the your go to agency for any of your web development needsß</p>
+                    </div>
                 </div>
+
                 <div style={gridItem}>
                     <h1>container 3</h1>
                 </div>
