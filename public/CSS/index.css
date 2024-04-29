@@ -13,8 +13,18 @@ body {
 /* Navigation bar -------------------------------------*/
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #092635;
+  background: #092635;
   overflow: hidden;
+  top: 0;
+  z-index: 100; 
+  position: sticky;/* Ensure the navbar is above other elements */
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 /* Style the links inside the navigation bar */

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import videoSource3 from "./Assets/videoComponentShowcase.mp4";
 import videoSource4 from "./Assets/videoComponentShowcase2.mp4";
 
-
 function VideoComponent() {
   //-----------------CSS styling for the video component-----------------
   // flexContainer

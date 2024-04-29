@@ -77,7 +77,7 @@ function Accordion() {
     marginTop: "2em",
     fontSize: "1.5em",
     fontFamily: "Roboto",
-    background: "black",
+    background: "#003C43",
     color: "white",
     borderRadius: "50px",
     width: "30%",

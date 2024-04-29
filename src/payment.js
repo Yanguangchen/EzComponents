@@ -102,7 +102,7 @@ export function PaymentComponent() {
   // inputFromClassInput
   const inputFromClassInput = {
     // Dimensions
-    width: "20em",
+    width: "25em",
     height: "2em",
 
     // Typography
@@ -121,10 +121,10 @@ export function PaymentComponent() {
 
   return (
     <div className="PaymentComponentWrapper">
-      <h2 id={"payment"} style={h2StylePayment}>
+      <h1 id={"payment"} style={h2StylePayment}>
         {" "}
         💳💳Payment Component💳💳
-      </h2>
+      </h1>
       <div style={paymentContainer}>
         <div style={cardVideo} className="cardVideo">
           <div style={flexCardVideo}>
@@ -210,7 +210,7 @@ export function PaymentApp() {
     fontFamily: "Roboto",
 
     // Color
-    background: "black",
+    background: "#003C43",
     color: "white",
 
     // Border

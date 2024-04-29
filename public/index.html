@@ -29,18 +29,20 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <!---------------NAVIGATION BAR--------------->
   <nav>
-    <div class="topbannervideo">
+    <div class="topbannervideo" id="top">
       <video src="./navbar/BannerTopVIdeo.mp4" loop autoPlay muted playsInline>
         Opps element isnt working
       </video>
     </div>
     <div class="topnav">
-      <a class="active" href="#navibar">NavBar Component</a>
+      <a href="#top">Top</a>
+      <a href="#navibar">NavBar Component</a>
       <a href="#namecard">Name Cards</a>
+      <a href="#footerComponent">Footer Component</a>
       <a href="#payment">Payment Component</a>
       <a href="#AccordionId">Accordion</a>
       <a href="#videoId">Video Component</a>
-      <a href="#videoId">Footer Component</a>
+      <a href="#bottom">Bottom</a>
   </nav>
   <!---------------NAVIGATION BAR--------------->
 
@@ -78,7 +80,7 @@
             </video>
           </div>
           <p>Powered using React.Js</p>
-          <p>Developed by Chen Yanguang from Web Wizards</p>
+          <p id="bottom">Developed by Chen Yanguang from Web Wizards</p>
         </div>
       </div>
     </div>
@@ -86,3 +88,18 @@
 </footer>
 </body>
 </html>
+
+<script>
+  window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementsByClassName("topnav")[0];
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>

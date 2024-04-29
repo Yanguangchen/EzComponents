@@ -43,7 +43,7 @@ const banner = {
   color: "white",
   // Layout
   margin: "0",
-  paddingTop:"1.1em",
+  paddingTop: "1.1em",
   display: "flex",
   justifyContent: "center",
   // Borders
@@ -108,7 +108,7 @@ function NavbarApp() {
     fontSize: "1.5em",
     fontFamily: "Roboto",
     // Color
-    background: "black",
+    background: "#003C43",
     color: "white",
     // Borders
     borderRadius: "50px",

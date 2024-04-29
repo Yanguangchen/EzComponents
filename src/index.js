@@ -11,6 +11,7 @@ import AccordionComponent from "./accordion";
 import RequirementsVideo from "./requirementsVideo";
 import NavbarComponent from "./navbar";
 import VideoComponentWrapper from "./video";
+import FooterApp from "./footer";
 //--------------------------------------//
 
 function Namecard(props) {
@@ -312,7 +313,7 @@ function App() {
   //-----CSS CONTROL FOR ADDING NEW COMPONENTS-----//
   //---Container that wraps the container
   const addComponentBtnDiv = {
-    fontFamily: "Roboto",
+    fontFamily: "League Spartan",
     textAlign: "center",
     marginBottom: "5em",
   };
@@ -356,6 +357,8 @@ root.render(
       <NavbarComponent />
       <h1 id={"namecard"}>Name card Components</h1>
       <App />
+      <h1 id={"footerComponent"}>Footer Components</h1>
+      <FooterApp />
       <PaymentComponent />
       <PaymentApp />
       <AccordionComponent />
