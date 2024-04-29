@@ -12,7 +12,7 @@ function RequirementsVideo() {
   const videoStylevideo = {
     width: "40%",
     border: "2px solid white",
-    borderRadius: "50px",
+    borderRadius: "30px",
   };
 
   const componentWrapper = {

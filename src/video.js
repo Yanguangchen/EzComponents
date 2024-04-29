@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import videoSource3 from "./Assets/videoComponentShowcase.mp4";
+import videoSource4 from "./Assets/videoComponentShowcase2.mp4";
+
 
 function VideoComponent() {
   //-----------------CSS styling for the video component-----------------
@@ -14,9 +16,11 @@ function VideoComponent() {
   const videoWrapper = {
     // Dimensions
     width: "60%",
+    marginTop: "2em",
 
     // Border
     borderRadius: "40px",
+    border: "2px solid black",
   };
 
   //-----------------END CSS styling for the video component-----------------
@@ -27,15 +31,27 @@ function VideoComponent() {
       <div style={flexContainer}>
         <video
           style={videoWrapper}
-          controls
+          autoPlay
           muted
           playsInline
           source
+          loop
           src={videoSource3}
           type="video/mp4"
         ></video>
       </div>
-      <p>Song credits: Landmine by post malone</p>
+      <div style={flexContainer}>
+        <video
+          style={videoWrapper}
+          autoPlay
+          muted
+          playsInline
+          source
+          loop
+          src={videoSource4}
+          type="video/mp4"
+        ></video>
+      </div>
     </div>
   );
 }

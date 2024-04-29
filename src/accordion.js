@@ -27,7 +27,7 @@ function Accordion() {
   ]);
 
   const panelStyle = {
-    backgroundColor: "#503C3C",
+    backgroundColor: "#135D66",
     color: "white",
     fontFamily: "roboto",
     border: "none",
@@ -42,7 +42,7 @@ function Accordion() {
   const buttonStyle = {
     backgroundColor: "transparent",
     color: "white",
-    fontFamily: "roboto",
+    fontFamily: "League Spartan",
     border: "none",
     width: "100%",
     fontSize: "1.5em",
@@ -56,7 +56,7 @@ function Accordion() {
   };
 
   const contentStyle = {
-    backgroundColor: "#3E3232",
+    backgroundColor: "#003C43",
     color: "white",
     fontFamily: "roboto",
     padding: "10px",
