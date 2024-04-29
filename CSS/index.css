@@ -16,9 +16,8 @@ body {
   background: #092635;
   overflow: hidden;
   top: 0;
-  z-index: 100; 
-  position: sticky;/* Ensure the navbar is above other elements */
-
+  z-index: 100;
+  position: sticky; /* Ensure the navbar is above other elements */
 }
 
 .sticky {
@@ -108,33 +107,17 @@ body {
   background-color: #555;
 }
 
-#fullscreenDiv {
-  color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Change as needed */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 230%;
-  display: none;
+h5 {
+  font-size: 2em;
+  color: #00343b;
+  margin: 0;
 }
-
 @media (max-width: 993px) {
   .cardBack {
     display: none;
   }
   .cardVideo {
     display: none;
-  }
-  .topnav {
-    background-color: #092635;
-    overflow: hidden;
-    display: grid;
-    align-items: center;
   }
   .banner {
     color: white;
@@ -147,6 +130,19 @@ body {
     margin-top: 7em;
     font-size: 0.8em;
   }
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h5 {
+    font-size: 1.2em;
+    color: #00343b;
+    margin: 0;
+  }
+
+  .gridCompItem > p {
+    font-size: 0.4em;
+  }
 }
 
 @media (max-width: 565px) {
@@ -156,11 +152,23 @@ body {
   .inputFromClass {
     width: 20em;
   }
+  .inputField {
+    width: 20em !important;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  .gridCompItem {
+    font-size: 0.7em;
+  }
 }
 
 @media (max-width: 477px) {
   .inputFromClass {
     width: 20em;
+  }
+  .gridContainerWrapper {
+    column-gap: 30px !important;
   }
 }
 
