@@ -12,6 +12,7 @@ import RequirementsVideo from "./requirementsVideo";
 import NavbarComponent from "./navbar";
 import VideoComponentWrapper from "./video";
 import FooterApp from "./footer";
+import GridContainer from "./gridContainer";
 //--------------------------------------//
 
 function Namecard(props) {
@@ -362,6 +363,7 @@ root.render(
       <PaymentComponent />
       <PaymentApp />
       <AccordionComponent />
+      <GridContainer />
       <VideoComponentWrapper />
     </div>
   </>

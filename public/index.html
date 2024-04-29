@@ -13,10 +13,7 @@
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <link
-  href="https://fonts.googleapis.com/css?family=League+Spartan"
-  rel="stylesheet"
-/>
+  <link href="https://fonts.googleapis.com/css?family=League+Spartan" rel="stylesheet" />
   <title>EzComponents</title>
 </head>
 
@@ -46,60 +43,61 @@
   </nav>
   <!---------------NAVIGATION BAR--------------->
 
-<section>
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <section>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-  <div class="FlexCenter">
-  <div class="banner">
-    <p id="subtitle">Click "Add Component" to generate new components</p>
-    <p id="subtitle">Powered using React.Js</p>
-    <div class="logoWrapper">
-    <video src="./logos/ReactLogo.mp4" loop autoPlay muted playsInline>
-      EzComponents Logo
-    </video>
-    </div>
-  </div>
-  </div>
-</section>
-
-<!-------------REACT CONTAINER-------------->
-<main>
-  <div id="root"></div>
-</main>
-<!-------------REACT CONTAINER-------------->
-
-<footer>
-  <main>
-    <div class="footer">
-      <div class="footerWrapper">
-        <div class="footerContent">
-          <h4>EzComponents</h4>
-          <div class="topFootervideo">
-            <video src="./staticFooter/footer.mp4" loop autoPlay muted playsInline>
-              Opps element isnt working
-            </video>
-          </div>
-          <p>Powered using React.Js</p>
-          <p id="bottom">Developed by Chen Yanguang from Web Wizards</p>
+    <div class="FlexCenter">
+      <div class="banner">
+        <p id="subtitle">Click "Add Component" to generate new components</p>
+        <p id="subtitle">Powered using React.Js</p>
+        <div class="logoWrapper">
+          <video src="./logos/ReactLogo.mp4" loop autoPlay muted playsInline>
+            EzComponents Logo
+          </video>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-------------REACT CONTAINER-------------->
+  <main>
+    <div id="root"></div>
   </main>
-</footer>
+  <!-------------REACT CONTAINER-------------->
+
+  <footer>
+    <main>
+      <div class="footer">
+        <div class="footerWrapper">
+          <div class="footerContent">
+            <h4>EzComponents</h4>
+            <div class="topFootervideo">
+              <video src="./staticFooter/footer.mp4" loop autoPlay muted playsInline>
+                Opps element isnt working
+              </video>
+            </div>
+            <p>Powered using React.Js</p>
+            <p id="bottom">Developed by Chen Yanguang from Web Wizards</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </footer>
 </body>
+
 </html>
 
 <script>
-  window.onscroll = function() {myFunction()};
+  window.onscroll = function () { myFunction() };
 
-var navbar = document.getElementsByClassName("topnav")[0];
-var sticky = navbar.offsetTop;
+  var navbar = document.getElementsByClassName("topnav")[0];
+  var sticky = navbar.offsetTop;
 
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
   }
-}
 </script>
