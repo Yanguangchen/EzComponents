@@ -373,7 +373,7 @@ root.render(
       <PaymentApp />
       <AccordionComponent />
       <VideoComponentWrapper />
-      <h1>WebGL interactive Canvas</h1>
+      <h1 id="webGL">WebGL interactive Canvas</h1>
       <PhysicsComponent />
     </div>
   </>
