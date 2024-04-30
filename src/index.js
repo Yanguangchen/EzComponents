@@ -13,6 +13,8 @@ import NavbarComponent from "./navbar";
 import VideoComponentWrapper from "./video";
 import FooterApp from "./footer";
 import GridContainer from "./gridContainer";
+import GridApp2 from "./gridContainer2";
+import GridApp1 from "./gridContainer1";
 //--------------------------------------//
 
 function Namecard(props) {
@@ -356,6 +358,10 @@ root.render(
       <RequirementsVideo />
       <h1 id={"gridComponent"}>Grid Component</h1>
       <GridContainer />
+      <h1>Grid Component 2x2</h1>
+      <GridApp2 />
+      <h1>Grid Component 1x1</h1>
+      <GridApp1 />
       <h1 id={"navibar"}>Navigation Bar Component</h1>
       <NavbarComponent />
       <h1 id={"namecard"}>Name card Components</h1>
