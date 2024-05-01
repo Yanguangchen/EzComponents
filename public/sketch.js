@@ -81,7 +81,7 @@ function setup() {
   World.add(engine.world, [poly1A, poly1B, constraint1]);
 
   // add stiff global constraint
-  poly2 = Bodies.polygon(300, 200, 5, 40);
+  poly2 = Bodies.polygon(300, 100, 5, 40);
   constraint2 = Constraint.create({
     pointA: { x: 600, y: 50 },
     bodyB: poly2,
@@ -94,7 +94,7 @@ function setup() {
   constraint3 = Constraint.create({
     pointA: { x: 500, y: 120 },
     bodyB: poly3,
-    pointB: { x: -10, y: -10 },
+    pointB: { x: 10, y: 0 },
     stiffness: 0.001,
     damping: 0.05,
   });
