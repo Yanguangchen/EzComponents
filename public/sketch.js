@@ -45,7 +45,18 @@ var boxes = [];
 var canvas;
 ///////////////////////////////////////////////////////////////////
 function setup() {
-  canvas = createCanvas(windowWidth - 20 , windowHeight / 2);
+  canvas = createCanvas(windowWidth - 20, windowHeight / 2);
+
+  const render = Matter.Render.create({
+    element: document.body,
+    engine: engine,
+    options: {
+
+        wireframes: true,
+
+        showAngleIndicator: true
+    }
+});
 
   // create an engine
   engine = Engine.create();
@@ -125,29 +136,35 @@ function draw() {
   if (box1 && box1.vertices) {
     drawVertices(box1.vertices);
   }
-  
+
   function generateObject(x, y) {
-    var b = Bodies.rectangle(x, y, random(10, 30), random(10, 30), {restitution: 0.8, friction: 0.5});
+    var b = Bodies.rectangle(x, y, random(5, 10), random(5, 10), {
+      restitution: 0.8,
+      friction: 0.5,
+    });
     World.add(engine.world, [b]);
     // Store the box
     boxes.push(b);
   }
-  
+
   if (box1 && box1.vertices) {
     drawVertices(box1.vertices);
   }
-  
+
   fill(255);
-  
+
   if (box1 && box1.vertices) {
     drawVertices(box1.vertices);
   }
-  
+
   for (var i = 0; i < boxes.length; i++) {
     if (boxes[i] && boxes[i].vertices) {
+      fill("#77B0AA");
+      stroke("#135D66");
       drawVertices(boxes[i].vertices);
+      stroke(0);
 
-      if(isOffScreen(boxes[i])) {
+      if (isOffScreen(boxes[i])) {
         World.remove(engine.world, boxes[i]);
         boxes.splice(i, 1);
         i--;
@@ -157,10 +174,10 @@ function draw() {
 
   function isOffScreen(body) {
     var pos = body.position;
-    return (pos.y > height || pos.x < 0 || pos.x > width);
+    return pos.y > height || pos.x < 0 || pos.x > width;
   }
 
-  generateObject(width/2, 0);
+  generateObject(width / 2, 0);
 
   fill("#00343b");
   drawVertices(poly2.vertices);
@@ -197,12 +214,11 @@ function draw() {
 
   fill(0);
 
-  rect(width/2 - 105, 30, 230, 35);
+  rect(width / 2 - 105, 30, 230, 35);
 
   fill(255);
   textSize(20);
-  text("Click and Drag to interact", width/2 - 103, 50);
-
+  text("Click and Drag to interact", width / 2 - 103, 50);
 }
 ///////////////////////////////////////////////////////////////
 // ********** HELPER FUNCTIONS *************
