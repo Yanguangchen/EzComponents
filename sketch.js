@@ -30,6 +30,10 @@ var constraint2;
 var poly3;
 var constraint3;
 
+//boxes
+var box1;
+
+//balls
 var ball1;
 var ball2;
 var ball3;
@@ -37,10 +41,22 @@ var ball4;
 var ball5;
 var ball6;
 
+var boxes = [];
 var canvas;
 ///////////////////////////////////////////////////////////////////
 function setup() {
-  canvas = createCanvas(windowWidth-17, windowHeight / 2 + 200);
+  canvas = createCanvas(windowWidth - 20, windowHeight / 2);
+
+  const render = Matter.Render.create({
+    element: document.body,
+    engine: engine,
+    options: {
+
+        wireframes: true,
+
+        showAngleIndicator: true
+    }
+});
 
   // create an engine
   engine = Engine.create();
@@ -89,7 +105,6 @@ function setup() {
   ground2 = Bodies.rectangle(width / 2, 400, 400, 10, { isStatic: true });
   ground3 = Bodies.rectangle(width / 2, height, 900, 10, { isStatic: true });
 
-
   World.add(engine.world, [
     ground,
     ground2,
@@ -117,6 +132,52 @@ function draw() {
   background(255);
 
   Engine.update(engine);
+
+  if (box1 && box1.vertices) {
+    drawVertices(box1.vertices);
+  }
+
+  function generateObject(x, y) {
+    var b = Bodies.rectangle(x, y, random(5, 10), random(5, 10), {
+      restitution: 0.8,
+      friction: 0.5,
+    });
+    World.add(engine.world, [b]);
+    // Store the box
+    boxes.push(b);
+  }
+
+  if (box1 && box1.vertices) {
+    drawVertices(box1.vertices);
+  }
+
+  fill(255);
+
+  if (box1 && box1.vertices) {
+    drawVertices(box1.vertices);
+  }
+
+  for (var i = 0; i < boxes.length; i++) {
+    if (boxes[i] && boxes[i].vertices) {
+      fill("#77B0AA");
+      stroke("#135D66");
+      drawVertices(boxes[i].vertices);
+      stroke(0);
+
+      if (isOffScreen(boxes[i])) {
+        World.remove(engine.world, boxes[i]);
+        boxes.splice(i, 1);
+        i--;
+      }
+    }
+  }
+
+  function isOffScreen(body) {
+    var pos = body.position;
+    return pos.y > height || pos.x < 0 || pos.x > width;
+  }
+
+  generateObject(width / 2, 0);
 
   fill("#00343b");
   drawVertices(poly2.vertices);
@@ -150,6 +211,14 @@ function draw() {
 
   fill("#135D66");
   drawVertices(ball6.vertices);
+
+  fill(0);
+
+  rect(width / 2 - 105, 30, 230, 35);
+
+  fill(255);
+  textSize(20);
+  text("Click and Drag to interact", width / 2 - 103, 50);
 }
 ///////////////////////////////////////////////////////////////
 // ********** HELPER FUNCTIONS *************

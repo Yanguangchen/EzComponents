@@ -160,6 +160,15 @@ h5 {
   .gridCompItem {
     font-size: 0.7em;
   }
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 10px;
+    font-family: "League Spartan", Roboto, Arial;
+  }
 }
 
 @media (max-width: 477px) {
