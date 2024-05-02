@@ -51,7 +51,6 @@ var canvas;
 ///////////////////////////////////////////////////////////////////
 function setup() {
   canvas = createCanvas(windowWidth - 20, windowHeight / 2);
-  canvas.parent('canvasContainer');
 
 
   // create an engine
