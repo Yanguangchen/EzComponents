@@ -15,7 +15,6 @@ import FooterApp from "./footer";
 import GridContainer from "./gridContainer";
 import GridApp2 from "./gridContainer2";
 import GridApp1 from "./gridContainer1";
-import PhysicsComponent from "./physics";
 //--------------------------------------//
 
 function Namecard(props) {
@@ -374,7 +373,6 @@ root.render(
       <AccordionComponent />
       <VideoComponentWrapper />
       <h1 id="webGL">WebGL interactive Canvas</h1>
-      <PhysicsComponent />
     </div>
   </>
 );

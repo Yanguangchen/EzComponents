@@ -16,7 +16,7 @@ var MouseConstraint = Matter.MouseConstraint;
 var Constraint = Matter.Constraint;
 
 var engine;
-var ground;
+// var ground;
 var ground2;
 var ground3;
 
@@ -42,24 +42,25 @@ var ball5;
 var ball6;
 
 var boxes = [];
+
+var propeller;
+var angle = 0;
+var angleSpeed = 0.1; //angular velocity
+
 var canvas;
 ///////////////////////////////////////////////////////////////////
 function setup() {
   canvas = createCanvas(windowWidth - 20, windowHeight / 2);
+  canvas.parent('canvasContainer');
 
-  const render = Matter.Render.create({
-    element: document.body,
-    engine: engine,
-    options: {
-
-        wireframes: true,
-
-        showAngleIndicator: true
-    }
-});
 
   // create an engine
   engine = Engine.create();
+
+  propeller = Bodies.rectangle(width / 2, height / 2, 300, 15, {
+    isStatic: true,
+    angle: angle,
+  });
 
   ball1 = Bodies.circle(300, 0, 20, { restitution: 0.4, friction: 0.0001 });
   ball2 = Bodies.circle(400, 0, 10, { restitution: 0.3, friction: 0.0001 });
@@ -101,12 +102,12 @@ function setup() {
   World.add(engine.world, [poly3, constraint3]);
 
   // ground
-  ground = Bodies.rectangle(width / 2, 200, 500, 10, { isStatic: true });
+  // ground = Bodies.rectangle(width / 2, 200, 500, 10, { isStatic: true });
   ground2 = Bodies.rectangle(width / 2, 400, 400, 10, { isStatic: true });
   ground3 = Bodies.rectangle(width / 2, height, 900, 10, { isStatic: true });
 
   World.add(engine.world, [
-    ground,
+    // ground,
     ground2,
     ground3,
     ball1,
@@ -115,6 +116,7 @@ function setup() {
     ball4,
     ball5,
     ball6,
+    propeller,
   ]);
 
   // setup mouse
@@ -177,7 +179,7 @@ function draw() {
     return pos.y > height || pos.x < 0 || pos.x > width;
   }
 
-  generateObject(width / 2, 0);
+  if (random(1) < 2) generateObject(width / 2, 0); //speed of the boxes generation
 
   fill("#00343b");
   drawVertices(poly2.vertices);
@@ -191,7 +193,7 @@ function draw() {
   drawConstraint(constraint3);
   drawConstraint(constraint1);
 
-  drawVertices(ground.vertices);
+  // drawVertices(ground.vertices);
   drawVertices(ground2.vertices);
 
   fill("#135D66");
@@ -211,6 +213,16 @@ function draw() {
 
   fill("#135D66");
   drawVertices(ball6.vertices);
+
+  fill(0);
+  drawVertices(ground3.vertices);
+
+  angle += 0.1;
+  Matter.Body.setAngle(propeller, angle);
+  Matter.Body.setAngularVelocity(propeller, angleSpeed);
+
+  fill(0);
+  drawVertices(propeller.vertices);
 
   fill(0);
 
