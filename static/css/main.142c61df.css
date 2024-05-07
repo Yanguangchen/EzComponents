@@ -1,0 +1,2 @@
+.ColorCycleCSS{animation:Colors 5s infinite;color:#4c85e0}@keyframes Colors{0%{color:red}25%{color:green}50%{color:blue}75%{color:purple}to{color:red}}.ColorCycleCSSBG{animation:ColorsBG 5s infinite;background-color:#4c85e0}@keyframes ColorsBG{0%{background-color:red}25%{background-color:green}50%{background-color:blue}75%{background-color:purple}to{background-color:red}}
+/*# sourceMappingURL=main.142c61df.css.map*/
