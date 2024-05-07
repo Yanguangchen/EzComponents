@@ -16,6 +16,9 @@ import GridContainer from "./gridContainer";
 import GridApp2 from "./gridContainer2";
 import GridApp1 from "./gridContainer1";
 import PhysicsComponent from "./physics";
+import ColorCycleComponent from "./ColorCycle";
+import "./ColorCycle.css"
+
 //--------------------------------------//
 
 function Namecard(props) {
@@ -365,6 +368,7 @@ root.render(
       <GridApp1 />
       <h1 id={"navibar"}>Navigation Bar Component</h1>
       <NavbarComponent />
+      <ColorCycleComponent />
       <h1 id={"namecard"}>Name card Components</h1>
       <App />
       <h1 id={"footerComponent"}>Footer Components</h1>

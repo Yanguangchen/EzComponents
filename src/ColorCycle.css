@@ -1,0 +1,21 @@
+.ColorCycleCSS {
+  animation: Colors 10s infinite loop;
+}
+
+@keyframes Colors {
+  0% {
+    color: red;
+  }
+  25% {
+    color: blue;
+  }
+  50% {
+    color: green;
+  }
+  75% {
+    color: yellow;
+  }
+  100% {
+    color: red;
+  }
+}
