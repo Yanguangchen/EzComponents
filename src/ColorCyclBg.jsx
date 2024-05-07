@@ -3,14 +3,13 @@
 // CLASS NAME ColorCycleCSS
 // REMEMBER TO LINK CSS FILE TO MAIN HTML
 //---------------------------------------------//
-import "./ColorCycle.css";
 
-function ColorCycleComponent() {
+function ColorCycleBgComponent() {
   const textWrapper = {
     display: "flex",
     justifyContent: "center",
     border: "1px solid #003C43",
-    marginBottom: "3em",
+    color: "white",
   };
 
   const textStyle = {
@@ -20,16 +19,15 @@ function ColorCycleComponent() {
   };
 
   return (
-    <div style={textWrapper}>
+    <div style={textWrapper} className="ColorCycleCSSBG">
       <div>
-        <p style={textStyle} className="ColorCycleCSS">
+        <p style={textStyle}>
           Super Charge Your Digital Business with
         </p>
       </div>
-      <div>
-      </div>
+      <div></div>
     </div>
   );
 }
 
-export default ColorCycleComponent;
+export default ColorCycleBgComponent

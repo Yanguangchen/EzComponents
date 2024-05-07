@@ -1,21 +1,46 @@
 .ColorCycleCSS {
-  animation: Colors 10s infinite loop;
+  color: #4c85e0;
+  animation: Colors 5s infinite;
+  /* text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black; */
 }
 
 @keyframes Colors {
   0% {
-    color: red;
+    color: red
   }
   25% {
-    color: blue;
+    color: green
   }
   50% {
-    color: green;
+    color: blue
   }
   75% {
-    color: yellow;
+    color: purple
   }
   100% {
-    color: red;
+    color: red
+    }
+}
+
+.ColorCycleCSSBG {
+  background-color: #4c85e0;
+  animation: ColorsBG 5s infinite;
+  /* text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black; */
+}
+@keyframes ColorsBG {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: green;
+  }
+  50% {
+    background-color: blue;
+  }
+  75% {
+    background-color: purple;
+  }
+  100% {
+    background-color: red;
   }
 }
