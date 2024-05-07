@@ -16,11 +16,10 @@
   }
   75% {
     color: purple;
-
   }
   100% {
     color: red;
-    }
+  }
 }
 
 .ColorCycleCSSBG {

@@ -46,7 +46,7 @@ let angleSpeed = 0.1; //angular velocity
 
 ///////////////////////////////////////////////////////////////////
 function setup() {
-  canvas = createCanvas(windowWidth - 20, windowHeight / 2);
+  canvas = createCanvas(windowWidth - 50, windowHeight / 2);
 
   //ENGINE-----------------//
   engine = Engine.create();
