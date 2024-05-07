@@ -4,13 +4,14 @@
 // REMEMBER TO LINK CSS FILE TO MAIN HTML
 //---------------------------------------------//
 import "./ColorCycle.css";
+import videoSource from './Assets/colorCycleVideo.mp4'
 
 function ColorCycleComponent() {
   const textWrapper = {
     display: "flex",
     justifyContent: "center",
-    border: "1px solid #003C43",
     marginBottom: "3em",
+    flexDirection: "column",
   };
 
   const textStyle = {
@@ -19,6 +20,13 @@ function ColorCycleComponent() {
     fontWeight: "900",
   };
 
+  const videoContainer = {
+    display: "flex",
+    justifyContent: "center",
+  }
+  const videoStyle = {
+    width: "35%",
+  };
   return (
     <div style={textWrapper}>
       <div>
@@ -26,9 +34,20 @@ function ColorCycleComponent() {
           Super Charge Your Digital Business with
         </p>
       </div>
-      <div>
+
+      <div style={videoContainer}>
+        <video
+        style={videoStyle}
+          autoPlay
+          muted
+          playsInline
+          source
+          loop
+          src={videoSource}
+          type="video/mp4"
+        ></video>
+        </div>
       </div>
-    </div>
   );
 }
 

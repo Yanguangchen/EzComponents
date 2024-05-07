@@ -6,19 +6,20 @@
 
 @keyframes Colors {
   0% {
-    color: red
+    color: red;
   }
   25% {
-    color: green
+    color: green;
   }
   50% {
-    color: blue
+    color: blue;
   }
   75% {
-    color: purple
+    color: purple;
+
   }
   100% {
-    color: red
+    color: red;
     }
 }
 
