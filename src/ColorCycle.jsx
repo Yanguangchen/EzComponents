@@ -28,7 +28,7 @@ function ColorCycleComponent() {
     width: "35%",
   };
   return (
-    <div style={textWrapper}>
+    <div style={textWrapper} className="ColorCycleComponent">
       <div>
         <p style={textStyle} className="ColorCycleCSS">
           Super Charge Your Digital Business with

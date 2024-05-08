@@ -172,7 +172,7 @@ function Namecard(props) {
   //---------------------INLINE CSS STYLES---------------------//
 
   return (
-    <div style={OuterContainer}>
+    <div style={OuterContainer} className="namecardComponent">
       <div style={defaultNamecardStyle}>
         <img
           style={BackgroundImage}
@@ -369,16 +369,16 @@ root.render(
       <GridApp1 />
       <h1 id={"navibar"}>Navigation Bar Component</h1>
       <NavbarComponent />
-      <h1 id={"colorcycle"}>Color Cycle</h1>
+      {/* <h1 id={"colorcycle"}>Color Cycle</h1>
       <ColorCycleComponent />
       <ColorCycleBgComponent />
-      <HorizontalBanner />
+      <HorizontalBanner /> */}
       <h1 id={"namecard"}>Name card Components</h1>
       <App />
       <h1 id={"footerComponent"}>Footer Components</h1>
       <FooterApp />
-      <PaymentComponent />
-      <PaymentApp />
+      {/* <PaymentComponent />
+      <PaymentApp /> */}
       <AccordionComponent />
       <PhysicsComponent />
       <VideoComponentWrapper />
