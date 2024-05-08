@@ -9,7 +9,6 @@ body {
   border: 0;
   font-family: "League Spartan", Roboto, Arial;
   min-width: fit-content;
-
 }
 
 /* Navigation bar -------------------------------------*/
@@ -20,9 +19,6 @@ body {
   top: 0;
   z-index: 100;
   position: sticky; /* Ensure the navbar is above other elements */
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
 }
 
 .sticky {
@@ -125,8 +121,10 @@ h5 {
   }
   .banner {
     color: white;
+    background: #00343b;
     width: 50%;
     margin-top: 2em;
+    border: 1px solid #00343b;
     border-radius: 13px;
     margin-bottom: 7em;
     margin-top: 7em;
@@ -189,6 +187,7 @@ h5 {
     justify-content: center;
     flex-direction: row;
     z-index: 100;
+    position: sticky; 
   }
 
   .topnav a {
