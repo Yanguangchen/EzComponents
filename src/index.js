@@ -17,8 +17,8 @@ import GridApp2 from "./gridContainer2";
 import GridApp1 from "./gridContainer1";
 import PhysicsComponent from "./physics";
 import ColorCycleComponent from "./ColorCycle";
-import ColorCycleBgComponent from "./ColorCyclBg"
-import  HorizontalBanner from "./HorizontalBanner";
+import ColorCycleBgComponent from "./ColorCyclBg";
+import HorizontalBanner from "./HorizontalBanner";
 
 //--------------------------------------//
 
@@ -369,16 +369,16 @@ root.render(
       <GridApp1 />
       <h1 id={"navibar"}>Navigation Bar Component</h1>
       <NavbarComponent />
-      {/* <h1 id={"colorcycle"}>Color Cycle</h1>
+      <h1 id={"colorcycle"}>Color Cycle</h1>
       <ColorCycleComponent />
       <ColorCycleBgComponent />
-      <HorizontalBanner /> */}
+      <HorizontalBanner />
       <h1 id={"namecard"}>Name card Components</h1>
       <App />
       <h1 id={"footerComponent"}>Footer Components</h1>
       <FooterApp />
-      {/* <PaymentComponent />
-      <PaymentApp /> */}
+      <PaymentComponent />
+      <PaymentApp />
       <AccordionComponent />
       <PhysicsComponent />
       <VideoComponentWrapper />
