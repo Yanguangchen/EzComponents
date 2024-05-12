@@ -67,16 +67,16 @@ function NavbarComponent() {
 
       <div style={topNavigation}>
         <div style={navlinks}>
-          <a style={topNavigationA} href="#home">
+          <a style={topNavigationA} href="#home" className="navLinkA">
             Home
           </a>
-          <a style={topNavigationA} href="#news">
+          <a style={topNavigationA} href="#news" className="navLinkA">
             News
           </a>
-          <a style={topNavigationA} href="#contact">
+          <a style={topNavigationA} href="#contact" className="navLinkA">
             Contact
           </a>
-          <a style={topNavigationA} href="#about">
+          <a style={topNavigationA} href="#about" className="navLinkA">
             About
           </a>
         </div>

@@ -8,7 +8,10 @@ body {
   margin: 0;
   border: 0;
   font-family: "League Spartan", Roboto, Arial;
-  min-width: fit-content;
+}
+
+#root {
+  width: 100%;
 }
 
 /* Navigation bar -------------------------------------*/
@@ -16,15 +19,6 @@ body {
 .topnav {
   background: #092635;
   overflow: hidden;
-  top: 0;
-  z-index: 100;
-  position: sticky; /* Ensure the navbar is above other elements */
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 
 /* Style the links inside the navigation bar */
@@ -32,7 +26,7 @@ body {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 20px;
+  padding: 1% 2%;
   text-decoration: none;
   font-size: 17px;
   font-family: "League Spartan", Roboto, Arial;
@@ -178,20 +172,6 @@ h5 {
   }
   .gridContainerWrapper {
     column-gap: 30px !important;
-  }
-
-  .topnav {
-    background: #092635;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    z-index: 100;
-    position: sticky; 
-  }
-
-  .topnav a {
-    font-size: 1.5em;
   }
   
 }
