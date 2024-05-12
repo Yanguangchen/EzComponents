@@ -69,7 +69,7 @@ function FooterComponent() {
                   Opps element isnt working
                 </video>
               </div>
-              <div style={listContainer1}>
+              <div style={listContainer1} className="listsFooter">
                 <ol style={lists}>
                   <a href="#Top">
                     <li style={individualLists}>Home</li>
@@ -85,7 +85,7 @@ function FooterComponent() {
                   </a>
                 </ol>
               </div>
-              <div style={listContainer1}>
+              <div style={listContainer1} className="listsFooter">
                 <ol style={lists}>
                   <a href="#">
                     <li style={individualLists}>Products</li>
