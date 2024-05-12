@@ -1,0 +1,29 @@
+@media screen and (max-width: 1126px) {
+    .HorizontalText {
+        font-size: 1.8em !important;
+        }
+}
+
+@media screen and (max-width: 1000px) {
+    .HorizontalText {
+        font-size: 1.5em !important;
+        }
+}
+
+@media screen and (max-width: 800px) {
+    .HorizontalText {
+        font-size: 1.3em !important;
+        }
+}
+
+@media screen and (max-width: 700px) {
+    .HorizontalText {
+        font-size: 1.0em !important;
+        }
+}
+
+@media screen and (max-width: 460px) {
+    .HorizontalText {
+        font-size: 0.8em !important;
+        }
+}

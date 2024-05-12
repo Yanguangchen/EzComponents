@@ -31,10 +31,10 @@ function Accordion() {
     color: "white",
     fontFamily: "roboto",
     border: "none",
-    borderRadius: "20px",
+    borderRadius: "10px",
     padding: "40px",
     margin: "5px",
-    width: "50%",
+    width: "70%",
     cursor: "pointer",
     marginTop: "2em",
   };
@@ -75,12 +75,12 @@ function Accordion() {
 
   const addComponentBtnAccordion = {
     marginTop: "2em",
-    fontSize: "1.5em",
+    fontSize: "1.3em",
     fontFamily: "Roboto",
     background: "#003C43",
     color: "white",
     borderRadius: "50px",
-    width: "40%",
+    width: "60%",
   };
 
   const addComponentBtnDivAccordion = {

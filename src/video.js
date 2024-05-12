@@ -18,7 +18,6 @@ function VideoComponent() {
     marginTop: "2em",
 
     // Border
-    borderRadius: "40px",
     border: "2px solid black",
   };
 
